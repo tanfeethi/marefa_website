@@ -1,24 +1,19 @@
 import { createBrowserRouter } from "react-router";
 import NotFound from "../pages/NotFound";
-import { lazyMinLoadTime } from "../hooks/helpers/lazyMinLoadTime";
+import { lazy } from "react";
 
 // Layout
-const Layout = lazyMinLoadTime(() => import("../components/layout/Layout"));
+const Layout = lazy(() => import("../components/layout/Layout"));
 
 // Pages (lazy)
-const Home = lazyMinLoadTime(() => import("../pages/Home"));
-const About = lazyMinLoadTime(() => import("../pages/About"));
-const Contact = lazyMinLoadTime(() => import("../pages/ContactUs"));
-const Blog = lazyMinLoadTime(() => import("../pages/Blog"));
-const BlogDetails = lazyMinLoadTime(() => import("../pages/BlogDetails"));
-const Privacy = lazyMinLoadTime(() => import("../pages/Privacy"));
-const Rules = lazyMinLoadTime(() => import("../pages/Rules"));
-const WhyUs = lazyMinLoadTime(() => import("../pages/WhyUs"));
-
-// Components
-// const ServicesDetails = lazy(
-//   () => import("../components/once/ourServices/ServicesDetails")
-// );
+const Home = lazy(() => import("../pages/Home"));
+const About = lazy(() => import("../pages/About"));
+const Contact = lazy(() => import("../pages/ContactUs"));
+const Blog = lazy(() => import("../pages/Blog"));
+const BlogDetails = lazy(() => import("../pages/BlogDetails"));
+const Privacy = lazy(() => import("../pages/Privacy"));
+const Rules = lazy(() => import("../pages/Rules"));
+const WhyUs = lazy(() => import("../pages/WhyUs"));
 
 const router = createBrowserRouter([
   {
