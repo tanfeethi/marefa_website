@@ -6,55 +6,53 @@ const Footer = () => {
         <footer style={{ backgroundColor: '#1C1132' }} className="text-white py-6">
             <WrapperContainer>
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-
                     <div className="flex items-center gap-3">
                         <img
                             src="/assets/logo.png"
                             alt="Logo"
-                            className="h-8 w-8"
+                            className="h-16 w-16"
                         />
-                        <span className="text-lg font-semibold">منارفا</span>
                     </div>
 
                     <nav className="flex flex-wrap justify-center gap-6 text-sm">
-                        <a href="#" className="hover:text-purple-300 transition-colors">الرئيسية</a>
-                        <a href="#" className="hover:text-purple-300 transition-colors">من نحن</a>
-                        <a href="#" className="hover:text-purple-300 transition-colors">احداث قادمة ومؤتمرات</a>
-                        <a href="#" className="hover:text-purple-300 transition-colors">آخر الأخبار</a>
-                        <a href="#" className="hover:text-purple-300 transition-colors">تواصل معنا</a>
-                        <a href="#" className="hover:text-purple-300 transition-colors">الشراكة والاستثمار</a>
-                        <a href="#" className="hover:text-purple-300 transition-colors">سياسة الخصوصية</a>
+                        <a href="#" className="hover:text-purple-400 transition-colors">Home</a>
+                        <a href="#" className="hover:text-purple-400 transition-colors">About Us</a>
+                        <a href="#" className="hover:text-purple-400 transition-colors">Upcoming Events</a>
+                        <a href="#" className="hover:text-purple-400 transition-colors">Latest News</a>
+                        <a href="#" className="hover:text-purple-400 transition-colors">Contact Us</a>
+                        <a href="#" className="hover:text-purple-400 transition-colors">Partnership & Investment</a>
+                        <a href="#" className="hover:text-purple-400 transition-colors">Privacy Policy</a>
                     </nav>
 
                     <button
-                        className="bg-purple-600 hover:bg-purple-700 rounded-full p-2 transition-colors"
+                        className="bg-[#8B68CE] hover:bg-purple-700 rounded-full p-2 transition-colors"
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
-                        <FaArrowUp className="h-5 w-5 text-white" />
+                        <FaArrowUp className="h-6 w-6 text-white" />
                     </button>
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-purple-800">
+                <div className="flex flex-col md:flex-row justify-between mt-6 pt-6 border-t border-purple-800 gap-4">
                     <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-sm">
 
-                        <div className="flex items-center gap-2 border border-[#8B68CE] bg-opacity-50 px-3 py-2 rounded">
-                            <FaEnvelope className="h-4 w-4 text-[#8B68CE]" />
-                            <span>hello@Maanrfa.com</span>
+                        <div className="flex items-center gap-2 border border-[#8B68CE] bg-opacity-50 px-3 py-2 rounded transition-all hover:bg-purple-700 hover:text-white group cursor-pointer">
+                            <FaEnvelope className="h-4 w-4 text-[#8B68CE] group-hover:text-white transition-colors" />
+                            <span className="text-white group-hover:text-white transition-colors">hello@Maarefa.com</span>
                         </div>
 
-                        <div className="flex items-center gap-2 border border-[#8B68CE] bg-opacity-50 px-3 py-2 rounded">
-                            <FaPhoneAlt className="h-4 w-4 text-[#8B68CE]" />
-                            <span>+201023559621</span>
+                        <div className="flex items-center gap-2 border border-[#8B68CE] bg-opacity-50 px-3 py-2 rounded transition-all hover:bg-purple-700 hover:text-white group cursor-pointer">
+                            <FaPhoneAlt className="h-4 w-4 text-[#8B68CE] group-hover:text-white transition-colors" />
+                            <span className="text-white group-hover:text-white transition-colors">+20 102 355 9621</span>
                         </div>
 
-                        <div className="flex items-center gap-2 border border-[#8B68CE] bg-opacity-50 px-3 py-2 rounded">
-                            <FaMapMarkerAlt className="h-4 w-4 text-[#8B68CE]" />
-                            <span>المملكة العربية السعودية</span>
+                        <div className="flex items-center gap-2 border border-[#8B68CE] bg-opacity-50 px-3 py-2 rounded transition-all hover:bg-purple-700 hover:text-white group cursor-pointer">
+                            <FaMapMarkerAlt className="h-4 w-4 text-[#8B68CE] group-hover:text-white transition-colors" />
+                            <span className="text-white group-hover:text-white transition-colors">Saudi Arabia</span>
                         </div>
                     </div>
 
                     <div className="text-center mt-4 text-xs text-[#FCFCFC]">
-                        جميع الحقوق محفوظة لمنصة منارفا
+                        All rights reserved © Maarefa Platform
                     </div>
                 </div>
             </WrapperContainer>
