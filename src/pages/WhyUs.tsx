@@ -1,6 +1,12 @@
+import Container from "../components/common/Container"
+import WhyChoice from "../components/once/WhyChoice"
+
 const WhyUs = () => {
     return (
-        <div>WhyUs</div>
+        <div>
+            <WhyChoice />
+            <Container />
+        </div>
     )
 }
 

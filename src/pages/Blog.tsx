@@ -1,6 +1,14 @@
+import Container from "../components/common/Container"
+import FAQs from "../components/common/FAQs"
+import AllBlogs from "../components/once/AllBlogs"
+
 const Blog = () => {
     return (
-        <div>Blog</div>
+        <div>
+            <AllBlogs />
+            <FAQs />
+            <Container />
+        </div>
     )
 }
 

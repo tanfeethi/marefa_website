@@ -10,8 +10,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, subtitle, className = '', subtitleClassName = '' }) => {
     return (
         <div className={`header-wrapper text-5xl font-semibold ${className}`}>
-            <h1>{title}</h1>
-            <p className={`${subtitleClassName}`}>{subtitle}</p>
+            <h1>{title} <span className={`${subtitleClassName}`}>{subtitle}</span></h1>
+            
         </div>
     );
 };
