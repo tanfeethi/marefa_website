@@ -16,7 +16,7 @@ import Header from '../common/Header';
 
 const WhyChoice = () => {
     return (
-        <section className="py-4 px-4 md:px-8 bg-white">
+        <section className="py-4 px-4 md:px-8 bg-white mt-26">
             <div className="">
                 <Header
                     title="لماذا تختار"

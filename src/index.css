@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@900;700&display=swap");
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
-body {
-  font-family: 'Cairo', sans-serif;
+@theme {
+  --font-cairo: "Cairo", sans-serif;
+}
+
+html {
+  font-family: var(--font-cairo) !important;
 }

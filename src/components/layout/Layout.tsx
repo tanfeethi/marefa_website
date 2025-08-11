@@ -6,12 +6,6 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <Outlet />
       <ScrollRestoration />
       <Footer />
