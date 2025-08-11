@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import WrapperContainer from "../common/WrapperContainer";
 import bgImage from "/assets/Container.webp";
 
@@ -30,10 +31,10 @@ const Hero = () => {
           </div>
 
           <div className="mt-10 w-[60%] m-auto text-center gap-5 flex justify-center">
-            <button className="bg-[#F19704] text-white px-8 font-semibold py-4 rounded-xl">
+            <button className="bg-[#F19704] text-white px-8 font-semibold py-4 rounded-xl cursor-pointer">
               إبدأ التعلّم الآن
             </button>
-            <button className="border-[#F19704] border-2 text-white px-8 font-semibold py-4 rounded-xl">
+            <button className="border-[#F19704] border-2 px-8 font-semibold py-4 rounded-xl text-[#F19704] cursor-pointer">
               أنضم كمعلم
             </button>
           </div>

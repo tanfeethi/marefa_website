@@ -76,7 +76,7 @@ const Navbar = () => {
 
           {/* Center: Nav Links */}
           <div className="hidden lg:flex gap-8 font-bold">
-            {["home", "about", "why-us", "news"].map((item) => (
+            {["home", "about", "why-us", "blogs"].map((item) => (
               <NavLink
                 key={item}
                 to={item === "home" ? "/" : `/${item}`}
