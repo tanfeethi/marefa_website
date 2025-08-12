@@ -1,10 +1,19 @@
+import { useAbout } from "../../hooks/useAboutUs";
 import WrapperContainer from "../common/WrapperContainer";
 
 const AboutHero = () => {
+  const { data, isLoading, error } = useAbout();
+
+  if (isLoading) return <div className="text-center py-20">جارٍ التحميل...</div>;
+  if (error) return <div className="text-center py-20 text-red-500">حدث خطأ أثناء تحميل المحتوى.</div>;
+
+  const titleParts = data?.name?.ar.split(" ") || [];
+  const title = titleParts.slice(0, -1).join(" ");
+  const subtitle = titleParts.slice(-1).join(" ");
+
   return (
-    <section className="mt-30">
+    <section className="mt-30 text-right">
       <WrapperContainer>
-        {/* Background image section */}
         <div className="w-full relative my-5">
           <div
             className="w-full xl:h-[400px] bg-no-repeat bg-center"
@@ -17,18 +26,14 @@ const AboutHero = () => {
               <div className="p-11 grid grid-cols-1 gap-5 xl:flex-col-2">
                 <div>
                   <button className="border-2 px-5 py-3 rounded-xl mb-3">
-                    من نحن
+                    {title} <span className="text-[#3F2571] underline">{subtitle}</span>
                   </button>
-                  <p className="text-5xl font-bold mb-3">
-                    مرحبًا بك في منصة معرفة طريقك
-                  </p>
-                  <p className="text-5xl font-bold">نحو تعلّم ذكي وفعّال</p>
+                  <p className="text-5xl font-bold mb-3">{title} {subtitle}</p>
                 </div>
-                <div className=" flex items-center text-2xl font-normal">
-                  نحن منصة تعليمية متخصصة في ربط الطلاب بالمعلمين الأكفاء من
-                  مختلف المجالات. نؤمن بأن التعليم الفعّال لا يقتصر على شخصية
-                  المحتوى، بل يعتمد على التفاعل، المرونة، وتجربة تعلم.
-                </div>
+                <div
+                  className=" text-base font-normal leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: data?.content?.ar || "" }}
+                />
               </div>
             </div>
           </div>
