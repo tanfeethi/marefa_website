@@ -3,14 +3,14 @@ import { NavLink, useLocation } from "react-router";
 import logo from "/public/assets/logo.png";
 import WrapperContainer from "../common/WrapperContainer";
 import { useTranslation } from "react-i18next";
-import { changeLanguage } from "../../utils/i18n";
+// import { changeLanguage } from "../../utils/i18n";
 import { getLastPathSegment } from "../../hooks/helpers/getLastPathSegment";
 import { FaRegEnvelope } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { t, i18n } = useTranslation("nav");
+  const { t } = useTranslation("nav");
 
   const location = useLocation();
   const lastSegment = getLastPathSegment(location.pathname);
@@ -19,10 +19,10 @@ const Navbar = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "ar" : "en";
-    changeLanguage(newLang);
-  };
+  // const toggleLanguage = () => {
+  //   const newLang = i18n.language === "en" ? "ar" : "en";
+  //   changeLanguage(newLang);
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
