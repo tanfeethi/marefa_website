@@ -1,7 +1,22 @@
+import { useEffect, useState } from "react";
 import WrapperContainer from "../common/WrapperContainer";
 import bgImage from "/assets/Container.webp";
+import Loader from "../common/Loader";
 
 const Hero = () => {
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = bgImage;
+    img.onload = () => {
+      setIsImageLoaded(true);
+    };
+  }, []);
+
+  if (!isImageLoaded) {
+    return <Loader />;
+  }
   return (
     <section
       style={{

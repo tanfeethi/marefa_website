@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import React, { useEffect, type ReactNode } from "react";
 
 interface FullScreenLoaderProps {
   message?: ReactNode;
@@ -43,6 +43,15 @@ const FullScreenLoader = ({
 };
 
 const Loader = () => {
+  useEffect(() => {
+    // Disable scroll
+    document.body.style.overflow = "hidden";
+
+    // Re-enable scroll on unmount
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
   const [currentDemo, setCurrentDemo] = React.useState(0);
 
   const demos = [
@@ -82,14 +91,7 @@ const Loader = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return (
-    <div className="relative">
-      {demos[currentDemo].component}
-
-      {/* منطقة عرض الكود (غير مستخدمة) */}
-      <div className="absolute bottom-6 right-6 z-10"></div>
-    </div>
-  );
+  return <div className="relative">{demos[currentDemo].component}</div>;
 };
 
 export default Loader;

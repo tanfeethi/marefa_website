@@ -5,6 +5,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import WrapperContainer from "../common/WrapperContainer";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -16,27 +17,45 @@ const Footer = () => {
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="#" className="hover:text-purple-400 transition-colors">
+            <Link to="/" className="hover:text-purple-400 transition-colors">
               الرئيسية
-            </a>
-            <a href="#" className="hover:text-purple-400 transition-colors">
+            </Link>
+            <Link
+              to="/about"
+              className="hover:text-purple-400 transition-colors"
+            >
               من نحن
-            </a>
-            <a href="#" className="hover:text-purple-400 transition-colors">
-              الفعاليات القادمة
-            </a>
-            <a href="#" className="hover:text-purple-400 transition-colors">
+            </Link>
+            <Link
+              to="/blogs"
+              className="hover:text-purple-400 transition-colors"
+            >
               آخر الأخبار
-            </a>
-            <a href="#" className="hover:text-purple-400 transition-colors">
+            </Link>
+            <Link
+              to="/contact-us"
+              className="hover:text-purple-400 transition-colors"
+            >
               تواصل معنا
-            </a>
-            <a href="#" className="hover:text-purple-400 transition-colors">
-              الشراكات والاستثمار
-            </a>
-            <a href="#" className="hover:text-purple-400 transition-colors">
+            </Link>
+            <Link
+              to="why-us"
+              className="hover:text-purple-400 transition-colors"
+            >
+              لماذا تختار معرفة؟
+            </Link>
+            <Link
+              to="/privacy"
+              className="hover:text-purple-400 transition-colors"
+            >
               سياسة الخصوصية
-            </a>
+            </Link>
+            <Link
+              to="/rules"
+              className="hover:text-purple-400 transition-colors"
+            >
+              الشروط والاحكام
+            </Link>
           </nav>
 
           <button
