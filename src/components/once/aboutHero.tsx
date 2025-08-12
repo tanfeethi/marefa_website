@@ -7,14 +7,14 @@ const AboutHero = () => {
         {/* Background image section */}
         <div className="w-full relative my-5">
           <div
-            className="w-full h-[400px] bg-no-repeat bg-center"
+            className="w-full xl:h-[400px] bg-no-repeat bg-center"
             style={{
               backgroundImage: "url('/assets/GroupFrame.png')",
               backgroundSize: "100% 100%",
             }}
           >
             <div className="flex items-center h-full">
-              <div className="p-11 grid grid-cols-2 gap-5">
+              <div className="p-11 grid grid-cols-1 gap-5 xl:flex-col-2">
                 <div>
                   <button className="border-2 px-5 py-3 rounded-xl mb-3">
                     من نحن

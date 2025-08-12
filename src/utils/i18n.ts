@@ -11,7 +11,7 @@ const resources = {
   },
 } as const;
 
-const lang = localStorage.getItem("lang") || "en";
+const lang = localStorage.getItem("lang") || "ar";
 
 document.documentElement.lang = lang;
 document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
@@ -19,7 +19,7 @@ document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
 i18n.use(initReactI18next).init({
   resources,
   lng: lang,
-  fallbackLng: "en",
+  fallbackLng: "ar",
   interpolation: { escapeValue: false },
 });
 

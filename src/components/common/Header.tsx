@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <div className={`header-wrapper text-5xl font-semibold ${className}`}>
-      <h1>
+      <h1 className="leading-16">
         {title} <span className={`${subtitleClassName}`}>{subtitle}</span>
       </h1>
       <p className="text-[17px] mt-3 font-light">{description}</p>
