@@ -3,31 +3,38 @@ import { AxiosError } from "axios";
 import { toast } from "react-toastify";
 import apiClient from "../utils/apiClient";
 
-interface UseContactForm {
+interface ContactFormData {
     name: string;
     email: string;
     phone: string;
-    subject: string;
     massage: string;
+    subject?: string;
 }
 
 interface ErrorResponse {
     message?: string;
 }
 
-const useContactForm = () => {
-    return useMutation<UseContactForm, AxiosError<ErrorResponse>, UseContactForm>({
-        mutationFn: async (formData: UseContactForm) => {
-            const response = await apiClient.post("/api/contactUs/sendMail", formData);
+const useContactForm = (options?: {
+    onSuccess?: () => void;
+    onError?: () => void;
+}) => {
+    return useMutation<ContactFormData, AxiosError<ErrorResponse>, ContactFormData>({
+        mutationFn: async (formData: ContactFormData) => {
+            const payload = {
+                ...formData,
+                subject: "Contact Us",
+            };
+            const response = await apiClient.post("/api/contactUs/sendMail", payload);
             return response.data;
         },
-        onSuccess: (data: any) => {
-            console.log("success=>", data.message || "Message sent");
+        onSuccess: () => {
             toast.success("تم إرسال الرسالة بنجاح");
+            options?.onSuccess?.();
         },
         onError: (error) => {
-            console.error("Error sending contact form:", error.response?.data?.message || error.message);
             toast.error(error.response?.data?.message || "فشل إرسال الرسالة");
+            options?.onError?.();
         },
     });
 };

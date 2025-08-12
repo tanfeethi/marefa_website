@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-    baseURL: "",
+    baseURL: "http://192.168.1.15:8000",
+    // baseURL: "https://ma3rfa.backend.tanfeethi.tanfeethi.com.sa",
 });
 
 apiClient.interceptors.request.use((config) => {
