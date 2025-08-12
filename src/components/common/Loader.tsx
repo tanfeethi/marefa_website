@@ -1,106 +1,93 @@
-const Loader = () => {
+import React, { type ReactNode } from "react";
+
+interface FullScreenLoaderProps {
+  message?: ReactNode;
+  subMessage?: ReactNode;
+  backgroundColor?: string;
+}
+
+const FullScreenLoader = ({
+  message = "جارٍ التحميل...",
+  subMessage = "يرجى الانتظار قليلاً",
+  backgroundColor = "bg-white",
+}: FullScreenLoaderProps) => {
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden z-[9999]">
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
-        <div className="mx-auto">
-          <div className="mb-12">
+    <div
+      className={`min-h-screen w-full flex items-center justify-center ${backgroundColor}`}
+    >
+      <div className="text-center">
+        {/* مؤشّر التحميل النابض */}
+        <div className="mb-6">
+          <div className="relative w-12 h-12 mx-auto">
+            {/* الحلقة الخارجية النابضة */}
             <div
-              className="inline-flex items-center justify-center w-24 h-24 rounded-2xl mb-6 shadow-xl animate-pulse"
-              style={{ backgroundColor: "#23afe5" }}
-            >
-              <span className="text-4xl font-bold text-white">JEC</span>
-            </div>
-          </div>
-
-          <div className="mb-8 relative">
-            <div className="flex justify-center items-center">
-              <div className="relative">
-                <div
-                  className="w-16 h-16 border-4 border-opacity-20 rounded-full animate-spin"
-                  style={{ borderColor: "#23afe5" }}
-                >
-                  <div
-                    className="absolute top-0 left-0 w-4 h-4 rounded-full"
-                    style={{ backgroundColor: "#23afe5" }}
-                  ></div>
-                </div>
-
-                <div
-                  className="absolute top-2 left-2 w-12 h-12 border-4 border-opacity-40 border-t-transparent rounded-full animate-spin"
-                  style={{
-                    borderColor: "#1a8bb8",
-                    animationDirection: "reverse",
-                    animationDuration: "1.5s",
-                  }}
-                ></div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-8 space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-              Loading...
-            </h2>
-            <p className="text-base text-gray-600 mx-auto leading-relaxed max-w-md">
-              Please wait while we prepare everything for you
-            </p>
-          </div>
-
-          <div className="mb-8 w-full max-w-xs mx-auto">
-            <div className="w-full bg-gray-200 rounded-full h-2 shadow-inner">
-              <div
-                className="h-2 rounded-full animate-pulse"
-                style={{
-                  backgroundColor: "#23afe5",
-                  width: "100%",
-                  background: `linear-gradient(90deg, #23afe5 0%, #1a8bb8 50%, #23afe5 100%)`,
-                  backgroundSize: "200% 100%",
-                  animation: "shimmer 2s ease-in-out infinite",
-                }}
-              ></div>
-            </div>
-          </div>
-
-          {/* Floating Dots Animation */}
-          <div className="flex justify-center items-center space-x-2">
-            <div
-              className="w-3 h-3 rounded-full animate-bounce"
-              style={{
-                backgroundColor: "#23afe5",
-                animationDelay: "0s",
-              }}
+              className="absolute inset-0 rounded-full animate-ping opacity-75"
+              style={{ backgroundColor: "#F19704" }}
             ></div>
+            {/* الدائرة الداخلية الثابتة */}
             <div
-              className="w-3 h-3 rounded-full animate-bounce"
-              style={{
-                backgroundColor: "#23afe5",
-                animationDelay: "0.2s",
-              }}
-            ></div>
-            <div
-              className="w-3 h-3 rounded-full animate-bounce"
-              style={{
-                backgroundColor: "#23afe5",
-                animationDelay: "0.4s",
-              }}
+              className="relative w-12 h-12 rounded-full"
+              style={{ backgroundColor: "#F19704" }}
             ></div>
           </div>
         </div>
-      </div>
 
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute -top-40 -right-40 w-80 h-80 rounded-full opacity-10 animate-pulse"
-          style={{ backgroundColor: "#23afe5" }}
-        ></div>
-        <div
-          className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full opacity-10 animate-pulse"
-          style={{
-            backgroundColor: "#1a8bb8",
-            animationDelay: "1s",
-          }}
-        ></div>
+        {/* نص التحميل */}
+        <div className="space-y-2">
+          <h2 className="text-2xl font-semibold text-gray-800">{message}</h2>
+          <p className="text-gray-500">{subMessage}</p>
+        </div>
       </div>
+    </div>
+  );
+};
+
+const Loader = () => {
+  const [currentDemo, setCurrentDemo] = React.useState(0);
+
+  const demos = [
+    {
+      component: <FullScreenLoader />,
+      title: "الخلفية البيضاء الافتراضية",
+    },
+    {
+      component: (
+        <FullScreenLoader
+          backgroundColor="bg-gradient-to-br from-gray-50 to-gray-100"
+          message="جاري تجهيز لوحة التحكم..."
+          subMessage="يتم إعداد تجربتك المخصصة"
+        />
+      ),
+      title: "خلفية متدرجة",
+    },
+    {
+      component: (
+        <FullScreenLoader
+          backgroundColor="bg-gray-900"
+          message={<span className="text-white">جارٍ تحميل التطبيق...</span>}
+          subMessage={
+            <span className="text-gray-300">جاري تهيئة المكوّنات</span>
+          }
+        />
+      ),
+      title: "الوضع الداكن",
+    },
+  ];
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDemo((prev) => (prev + 1) % demos.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative">
+      {demos[currentDemo].component}
+
+      {/* منطقة عرض الكود (غير مستخدمة) */}
+      <div className="absolute bottom-6 right-6 z-10"></div>
     </div>
   );
 };

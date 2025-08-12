@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router";
 import WrapperContainer from "../common/WrapperContainer";
 import bgImage from "/assets/Container.webp";
 
@@ -12,9 +11,9 @@ const Hero = () => {
       className="min-h-screen w-full pt-24"
     >
       <WrapperContainer>
-        <div className=" w-full h-40 text-white">
+        <div className=" w-full text-white">
           <div className="w-[60%] m-auto text-center mt-16">
-            <h1 className="text-6xl font-bold">
+            <h1 className="text-6xl font-bold leading-16">
               تعلم كما تريد، من أي مكان، ومع من تثق إبدأ رحلتك{" "}
               <span className="text-[#F19704]">التعليمية اليوم.</span>
             </h1>
@@ -39,7 +38,7 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="flex items-center gap-10 mt-20">
+          <div className="flex flex-col items-center gap-10 mt-20 md:flex-row">
             <div className="bg-gradient-to-bl from-[#050523] to-[#3D3B66] rounded-tl-[70px] rounded-lg p-5 text-white text-center flex-1">
               <h3 className="font-bold text-3xl mb-9">لماذا تختار "معرفة"؟</h3>
               <p className="mb-10 text-lg w-[80%] m-auto font-normal text-[#C5C5C5]">

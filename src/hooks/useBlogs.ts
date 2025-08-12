@@ -3,57 +3,40 @@ import { AxiosError } from "axios";
 import { useTranslation } from "react-i18next";
 import apiClient from "../utils/apiClient";
 
-interface TranslatedField {
-  ar: string;
-  en: string;
-}
-
 export interface BlogItem {
   id: number;
-  background: string;
-  title: TranslatedField;
-  text: TranslatedField;
-  status: number;
-  tags: string | null;
-  details: string | null;
-  cv: string;
+  title: string;
+  description: string;
+  image: string;
+  created_at: string;
+  updated_at: string;
 }
 
-interface BlogLinks {
-  first: string;
-  last: string;
-  prev: string | null;
-  next: string | null;
-}
-
-interface BlogMetaLink {
+export interface BlogMetaLink {
   url: string | null;
   label: string;
   active: boolean;
 }
 
-interface BlogMeta {
+export interface BlogsData {
   current_page: number;
+  data: BlogItem[];
+  first_page_url: string;
   from: number;
   last_page: number;
+  last_page_url: string;
   links: BlogMetaLink[];
+  next_page_url: string | null;
   path: string;
   per_page: number;
+  prev_page_url: string | null;
   to: number;
   total: number;
 }
 
-interface BlogsData {
-  data: BlogItem[];
-  links: BlogLinks;
-  meta: BlogMeta;
-}
-
-interface BlogsResponse {
-  data: BlogsData;
+export interface BlogsResponse {
   status: string;
-  error: string;
-  code: number;
+  data: BlogsData;
 }
 
 const useBlogs = (page: number) => {
@@ -62,7 +45,7 @@ const useBlogs = (page: number) => {
   return useQuery<BlogsResponse, AxiosError>({
     queryKey: ["blogs", i18n.language, page],
     queryFn: async () => {
-      const response = await apiClient.get(`/api/frontend/blogs?page=${page}`);
+      const response = await apiClient.get(`/api/news`);
       return response.data;
     },
     staleTime: 1000 * 60 * 5,

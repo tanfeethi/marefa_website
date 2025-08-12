@@ -6,13 +6,13 @@ import AboutClearVision from "../components/once/ServiceClearVision";
 
 const About = () => {
   return (
-    <div>
+    <>
       <AboutHero />
       <Divider />
       <AllServices />
       <AboutClearVision />
       <Container />
-    </div>
+    </>
   );
 };
 
