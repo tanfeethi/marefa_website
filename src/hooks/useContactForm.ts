@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { AxiosError } from "axios";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 import apiClient from "../utils/apiClient";
 
 interface ContactFormData {
