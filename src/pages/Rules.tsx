@@ -88,7 +88,7 @@ const Rules = () => {
       </div>
     );
 
-  const titleParts = data?.name?.ar?.split(" ") || [];
+  const titleParts = data?.name.split(" ") || [];
   const title = titleParts.slice(0, -1).join(" ");
   const subtitle = titleParts.slice(-1).join(" ");
 
@@ -128,7 +128,7 @@ const Rules = () => {
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-orange-100">
                 <div
                   className="text-gray-700 leading-relaxed space-y-6 text-lg terms-content"
-                  dangerouslySetInnerHTML={{ __html: data?.content?.ar || "" }}
+                  dangerouslySetInnerHTML={{ __html: data?.content || "" }}
                 />
               </div>
             </div>

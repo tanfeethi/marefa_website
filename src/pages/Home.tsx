@@ -6,13 +6,13 @@ import StaticSection from "../components/once/StaticSection";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <StaticSection />
       <FAQs />
       <Sponsors />
       <Container />
-    </div>
+    </>
   );
 };
 

@@ -55,12 +55,18 @@ const Hero = () => {
 
           <div className="flex flex-col items-center gap-10 mt-20 md:flex-row">
             <div className="bg-gradient-to-bl from-[#050523] to-[#3D3B66] rounded-tl-[70px] rounded-lg p-5 text-white text-center flex-1">
-              <h3 className="font-bold text-3xl mb-9">لماذا تختار "معرفة"؟</h3>
-              <p className="mb-10 text-lg w-[80%] m-auto font-normal text-[#C5C5C5]">
-                اختر من بين نخبة من المعلمين في مختلف التخصصات، واحجز دروسك
-                الفردية أو الجماعية بكل سهولة. تعلّم من أي مكان، على أي جهاز،
-                واستفد من أدوات تفاعلية ودعم دائم لمساعدتك على التطور.
-              </p>
+              <h3 className="font-bold text-3xl mb-9">
+                لماذا يختار المعلم معرفة؟
+              </h3>
+              <div className="mb-10 text-lg m-auto font-normal text-[#C5C5C5]">
+                <ul className="pr-5 flex flex-col items-center w-full leading-relaxed">
+                  <li>انشئ صفحتك التعريفية بسهولة</li>
+                  <li>حدد جدولك الزمني</li>
+                  <li>تواصل مباشرة مع طلابك</li>
+                  <li>اربح من مهاراتك و معرفتك</li>
+                  <li>قم برفع موادك التعليمية</li>
+                </ul>
+              </div>
             </div>
 
             <div className="border-4 border-white rounded-full">
@@ -76,12 +82,18 @@ const Hero = () => {
             </div>
 
             <div className="bg-gradient-to-br from-[#050523] to-[#3D3B66] rounded-tr-[70px] rounded-lg p-5 text-white text-center flex-1">
-              <h3 className="font-bold text-3xl mb-9">من نحن</h3>
-              <p className="mb-10 text-lg w-[80%] m-auto font-normal text-[#C5C5C5]">
-                نحن منصة تعليمية متخصصة في ربط الطلاب بالمعلمين الأكفاء من مختلف
-                المجالات. نؤمن بأن التعليم الفعّال لا يقتصر على شخصية المحتوى،
-                بل يعتمد على التفاعل، المرونة، وتجربة تعلم.
-              </p>
+              <h3 className="font-bold text-3xl mb-9">
+                لماذا يختار الطلاب معرفة؟
+              </h3>
+              <div className="mb-10 text-lg m-auto font-normal text-[#C5C5C5]">
+                <ul className="pr-5 flex flex-col items-center w-full leading-relaxed">
+                  <li>معلمون موثوقون و ذو خبرة</li>
+                  <li>دروس مباشرة مخصصة لاحتياجاتك</li>
+                  <li>أدوات تسهل التعلم و التواصل</li>
+                  <li>باقات مختلفة تناسب ميزانيتك</li>
+                  <li>دعم فني دائم</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

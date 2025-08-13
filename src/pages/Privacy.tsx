@@ -4,6 +4,8 @@ import Header from "../components/common/Header";
 const Privacy = () => {
   const { data, isLoading, error } = usePrivacy();
 
+  console.log(data?.name);
+
   if (isLoading)
     return (
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-yellow-50 mt-20">
@@ -58,11 +60,11 @@ const Privacy = () => {
 
   if (error)
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-pink-50">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-orange-50">
         <div className="text-center p-8 bg-white rounded-2xl shadow-lg border border-red-100">
-          <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg
-              className="w-8 h-8 text-red-500"
+              className="w-8 h-8 text-orange-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -75,14 +77,14 @@ const Privacy = () => {
               />
             </svg>
           </div>
-          <div className="text-red-600 text-lg">
+          <div className="text-orange-600 text-lg">
             حدث خطأ أثناء تحميل سياسة الخصوصية.
           </div>
         </div>
       </div>
     );
 
-  const titleParts = data?.name?.ar?.split(" ") || [];
+  const titleParts = data?.name?.split(" ") || [];
   const title = titleParts.slice(0, -1).join(" ");
   const subtitle = titleParts.slice(-1).join(" ");
 
@@ -114,7 +116,7 @@ const Privacy = () => {
               <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-orange-100">
                 <div
                   className="text-gray-700 leading-relaxed space-y-6 text-lg privacy-content"
-                  dangerouslySetInnerHTML={{ __html: data?.content?.ar || "" }}
+                  dangerouslySetInnerHTML={{ __html: data?.content || "" }}
                 />
               </div>
             </div>

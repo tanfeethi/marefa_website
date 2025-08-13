@@ -48,7 +48,7 @@ const AboutHero = () => {
     );
   }
 
-  const titleParts = data?.name?.ar.split(" ") || [];
+  const titleParts = data?.name.split(" ") || [];
   const title = titleParts.slice(0, -1).join(" ");
   const subtitle = titleParts.slice(-1).join(" ");
 
@@ -73,7 +73,7 @@ const AboutHero = () => {
                 </div>
                 <div
                   className="text-base font-normal leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: data?.content?.ar || "" }}
+                  dangerouslySetInnerHTML={{ __html: data?.content || "" }}
                 />
               </div>
             </div>
