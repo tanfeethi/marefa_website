@@ -41,7 +41,7 @@ const ContactForm = () => {
     return (
         <section className="py-16 px-4 md:px-8">
             <div className="border border-[#F197041A] rounded-xl p-6 md:p-10">
-                <div className="text-end mb-10">
+                <div className="mb-10">
                     <h2 className="text-3xl md:text-4xl font-bold">
                         تواصل <span className="text-[#3F2571] underline">معنا</span>
                     </h2>
