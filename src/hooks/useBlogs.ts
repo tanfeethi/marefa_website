@@ -8,6 +8,7 @@ export interface BlogItem {
   title: string;
   description: string;
   image: string;
+  image_url: string;
   created_at: string;
   updated_at: string;
 }
@@ -46,6 +47,8 @@ const useBlogs = (page: number) => {
     queryKey: ["blogs", i18n.language, page],
     queryFn: async () => {
       const response = await apiClient.get(`/api/news`);
+      console.log(response);
+      
       return response.data;
     },
     staleTime: 1000 * 60 * 5,

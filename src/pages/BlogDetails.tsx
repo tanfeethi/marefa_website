@@ -142,7 +142,7 @@ const BlogDetails = () => {
           <div className="mb-12">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-gray-200 group">
               <img
-                src={data?.data.image}
+                src={data?.data.image_url}
                 alt="Blog main"
                 className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
               />

@@ -55,12 +55,12 @@ const AllBlogs = () => {
                     className="border border-[#F58220] rounded-lg overflow-hidden shadow-sm bg-white"
                   >
                     <img
-                      src={blog.image}
+                      src={blog.image_url}
                       alt={blog.title}
                       className="w-full h-48 object-cover"
                     />
 
-                    <div className="bg-[#F58220] mx-auto py-1 w-fit px-3 text-center rounded-2xl">
+                    <div className="bg-[#F58220] mx-auto py-1 w-fit px-3 text-center rounded-2xl mt-6">
                       {blog.title}
                     </div>
 
