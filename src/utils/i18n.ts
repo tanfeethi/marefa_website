@@ -11,15 +11,22 @@ const resources = {
   },
 } as const;
 
+// Get saved lang OR default to "ar"
 const lang = localStorage.getItem("lang") || "ar";
 
+// Ensure we always save a fallback into localStorage
+if (!localStorage.getItem("lang")) {
+  localStorage.setItem("lang", "ar");
+}
+
+// Apply language and direction to <html>
 document.documentElement.lang = lang;
 document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: lang,
-  fallbackLng: "ar",
+  lng: lang, // starting language
+  fallbackLng: "ar", // fallback language
   interpolation: { escapeValue: false },
 });
 
