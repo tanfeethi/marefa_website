@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { useAbout } from "../../hooks/useAboutUs";
 import WrapperContainer from "../common/WrapperContainer";
 
 const AboutHero = () => {
   const { data, isLoading, error } = useAbout();
+  const { i18n } = useTranslation();
 
   const renderSkeleton = () => (
     <section className="mt-30 text-right">
@@ -42,7 +44,9 @@ const AboutHero = () => {
     return (
       <section className="mt-30 text-right">
         <WrapperContainer>
-          <div className="text-center py-20 text-red-500">حدث خطأ أثناء تحميل المحتوى.</div>
+          <div className="text-center py-20 text-red-500">
+            حدث خطأ أثناء تحميل المحتوى.
+          </div>
         </WrapperContainer>
       </section>
     );
@@ -63,13 +67,15 @@ const AboutHero = () => {
               backgroundSize: "100% 100%",
             }}
           >
-            <div className="flex items-center h-full">
-              <div className="p-11 grid grid-cols-1 gap-5 xl:flex-col-2">
+            <div className="flex flex-col justify-center h-full">
+              <button className="border-2 px-5 py-3 rounded-xl mb-3 mr-11 w-fit">
+                <span>{i18n.language === "en" ? "About Us" : "من نحن"}</span>
+              </button>
+              <div className="p-11 grid grid-cols-1 gap-5 xl:grid-cols-2 items-center">
                 <div>
-                  <button className="border-2 px-5 py-3 rounded-xl mb-3">
-                    {title} <span className="text-[#3F2571] underline">{subtitle}</span>
-                  </button>
-                  <p className="text-5xl font-bold mb-3">{title} {subtitle}</p>
+                  <p className="text-5xl font-bold mb-3">
+                    {title} <br /> {subtitle}
+                  </p>
                 </div>
                 <div
                   className="text-base font-normal leading-relaxed"
