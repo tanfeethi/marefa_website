@@ -52,10 +52,6 @@ const AboutHero = () => {
     );
   }
 
-  const titleParts = data?.name.split(" ") || [];
-  const title = titleParts.slice(0, -1).join(" ");
-  const subtitle = titleParts.slice(-1).join(" ");
-
   return (
     <section className="mt-30 text-right">
       <WrapperContainer>
@@ -73,12 +69,12 @@ const AboutHero = () => {
               </button>
               <div className="p-11 grid grid-cols-1 gap-5 xl:grid-cols-2 items-center">
                 <div>
-                  <p className="text-5xl font-bold mb-3">
-                    {title} <br /> {subtitle}
+                  <p className="text-5xl font-bold mb-3 leading-16">
+                    مرحبًا بك في منصة معرفة طريقك <br /> نحو تعلّم ذكي وفعّال
                   </p>
                 </div>
                 <div
-                  className="text-base font-normal leading-relaxed"
+                  className="text-lg font-normal leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: data?.content || "" }}
                 />
               </div>
