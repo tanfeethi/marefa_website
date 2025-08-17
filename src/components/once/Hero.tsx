@@ -59,12 +59,12 @@ const Hero = () => {
                 لماذا يختار المعلم معرفة؟
               </h3>
               <div className="mb-10 text-lg m-auto font-normal text-[#C5C5C5]">
-                <ul className="pr-5 flex flex-col items-center w-full leading-relaxed">
-                  <li>انشئ صفحتك التعريفية بسهولة</li>
-                  <li>حدد جدولك الزمني</li>
-                  <li>تواصل مباشرة مع طلابك</li>
-                  <li>اربح من مهاراتك و معرفتك</li>
-                  <li>قم برفع موادك التعليمية</li>
+                <ul className="list-disc list-inside pr-5 flex flex-col w-full leading-relaxed text-right">
+                  <li>معلمون موثوقون و ذو خبرة</li>
+                  <li>دروس مباشرة مخصصة لاحتياجاتك</li>
+                  <li>أدوات تسهل التعلم و التواصل</li>
+                  <li>باقات مختلفة تناسب ميزانيتك</li>
+                  <li>دعم فني دائم</li>
                 </ul>
               </div>
             </div>
@@ -86,7 +86,7 @@ const Hero = () => {
                 لماذا يختار الطلاب معرفة؟
               </h3>
               <div className="mb-10 text-lg m-auto font-normal text-[#C5C5C5]">
-                <ul className="pr-5 flex flex-col items-center w-full leading-relaxed">
+                <ul className="list-disc list-inside pr-5 flex flex-col w-full leading-relaxed text-right">
                   <li>معلمون موثوقون و ذو خبرة</li>
                   <li>دروس مباشرة مخصصة لاحتياجاتك</li>
                   <li>أدوات تسهل التعلم و التواصل</li>
