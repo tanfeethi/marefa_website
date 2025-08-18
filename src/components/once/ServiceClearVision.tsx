@@ -19,7 +19,7 @@ const AboutClearVision = () => {
           </div>
 
           {/* Background image section */}
-          <div className="w-full relative my-5">
+          <div className="w-full relative my-5 mb-32">
             <div
               className="w-full h-full bg-no-repeat bg-center"
               style={{
@@ -27,10 +27,10 @@ const AboutClearVision = () => {
                 backgroundSize: "100% 100%",
               }}
             >
-              <div className="p-11">
-                <div className="w-[25%] m-auto">
+              <div className="p-10">
+                <div className="w-[30%] m-auto">
                   <TeamMemberCard
-                    image="assets/team/samer.webp"
+                    image="assets/team/samer.jpg"
                     name="ثامر بن معمر"
                     role="الرئيس التنفيذي"
                   />
@@ -38,20 +38,20 @@ const AboutClearVision = () => {
               </div>
 
               <div className="grid grid-cols-2 w-[70%] m-auto">
-                <div className="p-11">
+                <div className="p-10">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="assets/team/samer.webp"
+                      image="assets/team/samer.jpg"
                       name="ثامر بن معمر"
                       role="نائب الرئيس التنفيذي"
                     />
                   </div>
                 </div>
 
-                <div className="p-11">
+                <div className="p-10">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="assets/team/abdallah.webp"
+                      image="assets/team/abdallah.jpg"
                       name="عبدالله الماضي"
                       role="مدير الاداره المالية"
                     />
@@ -60,30 +60,30 @@ const AboutClearVision = () => {
               </div>
 
               <div className="grid grid-cols-3 m-auto">
-                <div className="p-11">
+                <div className="p-10">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="assets/team/Mohamed.webp"
+                      image="assets/team/Mohamed.jpg"
                       name="محمد الحصيان"
                       role="مدير التسويق"
                     />
                   </div>
                 </div>
 
-                <div className="p-11">
+                <div className="p-10">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="assets/team/khalid.webp"
+                      image="assets/team/khalid.jpg"
                       name="خالد التويجري"
                       role="مدير أنظمة المعلومات"
                     />
                   </div>
                 </div>
 
-                <div className="p-11">
+                <div className="p-10">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="assets/team/khalid.webp"
+                      image="assets/team/khalid.jpg"
                       name="محمد العبيد"
                       role="مدير إدارة العمليات التقنية"
                     />
