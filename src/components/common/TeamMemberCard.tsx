@@ -29,7 +29,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
             <img
               src={image}
               alt={name}
-              className="w-[100px] h-[100px] rounded-lg object-cover"
+              className="w-[100px] h-[100px] rounded-lg object-fill object-center"
             />
           </div>
           <div>

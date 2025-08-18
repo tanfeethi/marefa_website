@@ -30,7 +30,7 @@ const AboutClearVision = () => {
               <div className="p-11">
                 <div className="w-[25%] m-auto">
                   <TeamMemberCard
-                    image="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                    image="assets/team/samer.webp"
                     name="ثامر بن معمر"
                     role="الرئيس التنفيذي"
                   />
@@ -41,9 +41,9 @@ const AboutClearVision = () => {
                 <div className="p-11">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                      image="assets/team/samer.webp"
                       name="ثامر بن معمر"
-                      role="نائب االرئيس التنفيذي"
+                      role="نائب الرئيس التنفيذي"
                     />
                   </div>
                 </div>
@@ -51,7 +51,7 @@ const AboutClearVision = () => {
                 <div className="p-11">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                      image="assets/team/abdallah.webp"
                       name="عبدالله الماضي"
                       role="مدير الاداره المالية"
                     />
@@ -63,7 +63,7 @@ const AboutClearVision = () => {
                 <div className="p-11">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                      image="assets/team/Mohamed.webp"
                       name="محمد الحصيان"
                       role="مدير التسويق"
                     />
@@ -73,7 +73,7 @@ const AboutClearVision = () => {
                 <div className="p-11">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                      image="assets/team/khalid.webp"
                       name="خالد التويجري"
                       role="مدير أنظمة المعلومات"
                     />
@@ -83,7 +83,7 @@ const AboutClearVision = () => {
                 <div className="p-11">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                      image="assets/team/khalid.webp"
                       name="محمد العبيد"
                       role="مدير إدارة العمليات التقنية"
                     />
