@@ -40,9 +40,9 @@ const AboutClearVision = () => {
                 <div className="p-10">
                   <div className=" m-auto">
                     <TeamMemberCard
-                      image="assets/team/samer.jpg"
-                      name="ثامر بن معمر"
-                      role="نائب الرئيس التنفيذي"
+                      image="assets/team/Mohamed.jpg"
+                      name="محمد الحصيان"
+                      role="مدير التسويق"
                     />
                   </div>
                 </div>
@@ -58,8 +58,8 @@ const AboutClearVision = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 m-auto">
-                <div className="p-10">
+              <div className="grid grid-cols-2 w-[70%] m-auto">
+                {/* <div className="p-10">
                   <div className=" m-auto">
                     <TeamMemberCard
                       image="assets/team/Mohamed.jpg"
@@ -67,7 +67,7 @@ const AboutClearVision = () => {
                       role="مدير التسويق"
                     />
                   </div>
-                </div>
+                </div> */}
 
                 <div className="p-10">
                   <div className=" m-auto">
