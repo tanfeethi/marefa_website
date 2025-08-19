@@ -65,8 +65,8 @@ const AllBlogs = () => {
                     </div>
 
                     <div className="p-4 text-center">
-                      <h3 className="text-sm text-gray-800 mb-2">
-                        {blog.title}
+                      <h3 className="text-sm text-gray-800 mb-2 line-clamp-1">
+                        {blog.description}
                       </h3>
                       <button
                         onClick={() => navigate(`/blog-details/${blog.id}`)}

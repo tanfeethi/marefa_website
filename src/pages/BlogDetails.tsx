@@ -168,7 +168,7 @@ const BlogDetails = () => {
               </div>
 
               {/* Call-to-Action Section */}
-              <div className="mt-12 pt-8 border-t border-gray-100">
+              {/* <div className="mt-12 pt-8 border-t border-gray-100">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                   <div className="text-center md:text-right">
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">
@@ -213,7 +213,7 @@ const BlogDetails = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
