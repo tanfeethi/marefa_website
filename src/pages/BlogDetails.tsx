@@ -1,10 +1,10 @@
-import { useNavigate, useParams } from "react-router";
+import { useParams } from "react-router";
 import WrapperContainer from "../components/common/WrapperContainer";
 import useBlogDetails from "../hooks/useBlogDetails";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { data, isLoading } = useBlogDetails(Number(id));
 
   // Skeleton loader component
