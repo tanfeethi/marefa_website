@@ -17,7 +17,7 @@ const services = [
   },
   {
     title: "مجتمع نشط يدعم التعلم المستمر",
-    image: "/assets/blog.png",
+    image: "/assets/personImage3.jpg",
   },
 ];
 

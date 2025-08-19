@@ -56,17 +56,17 @@ const Hero = () => {
           <div className="flex flex-col items-center gap-10 mt-20 md:flex-row">
             <div className="bg-gradient-to-bl from-[#050523] to-[#3D3B66] rounded-tl-[70px] rounded-lg p-5 text-white text-center flex-1">
               <h3 className="font-bold text-3xl mb-9">
-                لماذا يختار المعلم معرفة؟
+                ماذا نُقدّم؟
               </h3>
               <div className="mb-10 text-lg m-auto font-normal text-[#C5C5C5]">
                 <ul className="list-disc list-inside pr-5 flex flex-col w-full leading-relaxed text-right">
-                  <li>معلمون موثوقون و ذو خبرة</li>
-                  <li>دروس مباشرة مخصصة لاحتياجاتك</li>
-                  <li>أدوات تسهل التعلم و التواصل</li>
-                  <li>باقات مختلفة تناسب ميزانيتك</li>
-                  <li>دعم فني دائم</li>
+                  <li>دروس مباشرة فردية أو جماعية</li>
+                  <li>أدوات تفاعلية داخل الحصة: مشاركة ملفات، ملاحظات مباشرة</li>
+                  <li>حجوزات مرنة، وسهولة في الدفع</li>
+                  <li>مجتمع نشط يدعم التعلّم المستمر</li>
                 </ul>
               </div>
+
             </div>
 
             <div className="border-4 border-white rounded-full">

@@ -46,7 +46,7 @@ const FAQs = () => {
                   onClick={() => toggleFAQ(index)}
                   className="w-full text-right px-4 py-4 flex justify-between items-center"
                 >
-                  <span className="text-base font-medium text-[#030303]">
+                  <span className="text-xl font-medium text-[#030303]">
                     {faq.question}
                   </span>
                   <span className="text-white bg-[#F19704] rounded p-1.5">
@@ -59,7 +59,7 @@ const FAQs = () => {
                     <div className="px-4">
                       <div className="border-b border-[#C5C5C5] w-full"></div>
                     </div>
-                    <div className="px-4 pb-4 pt-4 text-sm text-[#727272]">
+                    <div className="px-4 pb-4 pt-4 text-lg text-[#727272]">
                       {faq.answer}
                     </div>
                   </>

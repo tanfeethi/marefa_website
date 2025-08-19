@@ -2,7 +2,7 @@ import React from "react";
 
 interface HeaderProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   className?: string;
   subtitleClassName?: string;
   description?: string;

@@ -11,7 +11,6 @@ const AboutClearVision = () => {
           <div className="w-full py-16">
             <Header
               title="رؤية واضحة من القادة، ورسالة تحمل قيم المنصة."
-              subtitle="قيم المنصة"
               className="text-3xl md:text-4xl font-bold mb-4"
               subtitleClassName="text-[#3F2571] underline"
               description={`في "معرفة"، تبدأ الرحلة التعليمية من قناعة راسخة لدى فريق القيادة بأن التعليم هو أساس المستقبل. نشارككم التزامنا ببناء منصة تعليمية تفاعلية، موثوقة، وشاملة تدعم الطلاب والمعلمين، وتدفع بالمجتمع نحو التعلّم المستمر والتميّز`}

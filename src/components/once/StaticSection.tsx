@@ -9,7 +9,7 @@ const values = [
   {
     title: "الرسالة",
     text: "نؤمن أن التعليم ليس مجرد نقل للمعلومات بل هو تجربة حية تبني الثقة وتطلق الفضول وتلهم التعلم تعمل على تمكين كل طالب من الوصول إلى المعرفة التي يستحقها من خلال بيئة رقمية آمنة وتفاعلية تجمع بين جودة المعلم وسهولة الوصول",
-    image: "/assets/blog.png",
+    image: "/assets/personImage4.jpg",
   },
   {
     title: "قيمنا",
@@ -21,7 +21,7 @@ const values = [
       "أدوات ذات جودة وأطر قياسية",
       "إشراك المجتمع لخلق تجربة تعلم فريدة",
     ],
-    image: "/assets/blog.png",
+    image: "/assets/personImage3.jpg",
   },
 ];
 
@@ -41,7 +41,6 @@ const StaticSection = () => {
           title="الرؤية"
           subtitle="و قيمنا والرسالة"
           className="text-center text-3xl md:text-4xl mb-10"
-          subtitleClassName="text-[#3F2571] font-bold underline decoration-[#3F2571]"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -56,11 +55,11 @@ const StaticSection = () => {
                 {Array.isArray(item.text) ? (
                   <ul className="grid grid-cols-2 gap-x-4 gap-y-1 pr-5 text-sm text-gray-700 leading-relaxed list-disc list-inside">
                     {item.text.map((point, i) => (
-                      <li key={i}>{point}</li>
+                      <li className="text-md" key={i}>{point}</li>
                     ))}
                   </ul>
                 ) : (
-                  <p className="text-sm text-gray-700 leading-relaxed">
+                  <p className="text-lg text-gray-700 leading-relaxed">
                     {item.text}
                   </p>
                 )}
