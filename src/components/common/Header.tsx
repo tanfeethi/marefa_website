@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({
       <h1 className="leading-16">
         {title} <span className={`${subtitleClassName}`}>{subtitle}</span>
       </h1>
-      <p className="text-[17px] mt-3 font-light">{description}</p>
+      <p className="text-[24px] mt-3 font-light">{description}</p>
     </div>
   );
 };

@@ -4,12 +4,12 @@ const values = [
   {
     title: "الرؤية",
     text: "أن نكون المنصة الرائدة في مجال التعليم الرقمي في العالم العربي، من خلال تمكين الأفراد من التعلم الفعّال، وتطوير مهاراتهم في بيئة تعليمية محفّزة، شاملة، موثوقة، ومرنة، تواكب تطلعات المستقبل وتساهم في بناء جيل معرفي متميز.",
-    image: "/assets/blog.png",
+    image: "/assets/Image1.jpg",
   },
   {
     title: "الرسالة",
     text: "نؤمن أن التعليم ليس مجرد نقل للمعلومات بل هو تجربة حية تبني الثقة وتطلق الفضول وتلهم التعلم تعمل على تمكين كل طالب من الوصول إلى المعرفة التي يستحقها من خلال بيئة رقمية آمنة وتفاعلية تجمع بين جودة المعلم وسهولة الوصول",
-    image: "/assets/personImage4.jpg",
+    image: "/assets/Image2.png",
   },
   {
     title: "قيمنا",
@@ -21,7 +21,7 @@ const values = [
       "أدوات ذات جودة وأطر قياسية",
       "إشراك المجتمع لخلق تجربة تعلم فريدة",
     ],
-    image: "/assets/personImage3.jpg",
+    image: "/assets/Image3.png",
   },
 ];
 
@@ -53,9 +53,9 @@ const StaticSection = () => {
                 <h3 className="font-bold text-lg mb-2">{item.title}</h3>
 
                 {Array.isArray(item.text) ? (
-                  <ul className="grid grid-cols-2 gap-x-4 gap-y-1 pr-5 text-sm text-gray-700 leading-relaxed list-disc list-inside">
+                  <ul className="grid grid-cols-1 gap-x-4 gap-y-1 pr-5 text-sm text-gray-700 leading-relaxed list-disc list-inside">
                     {item.text.map((point, i) => (
-                      <li className="text-md" key={i}>{point}</li>
+                      <li className="text-lg" key={i}>{point}</li>
                     ))}
                   </ul>
                 ) : (
