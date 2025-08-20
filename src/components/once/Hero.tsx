@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import WrapperContainer from "../common/WrapperContainer";
 import bgImage from "/assets/Container.webp";
 import Loader from "../common/Loader";
+import { useIntro } from "../../hooks/useIntro";
 
 const Hero = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const { data: introData, isLoading: introLoading, isError } = useIntro();
 
   useEffect(() => {
     const img = new Image();
@@ -14,9 +16,10 @@ const Hero = () => {
     };
   }, []);
 
-  if (!isImageLoaded) {
+  if (!isImageLoaded || introLoading) {
     return <Loader />;
   }
+
   return (
     <section
       style={{
@@ -26,22 +29,23 @@ const Hero = () => {
       className="min-h-screen w-full pt-24"
     >
       <WrapperContainer>
-        <div className=" w-full text-white">
+        <div className="w-full text-white">
           <div className="w-[60%] m-auto text-center mt-16">
             <h1 className="text-6xl font-bold leading-16">
               تعلم كما تريد، من أي مكان، ومع من تثق إبدأ رحلتك{" "}
               <span className="text-[#F19704]">التعليمية اليوم.</span>
             </h1>
-            <p className="mt-7 text-[#E0E0E0]">
-              تطبيق معرفة منصة تعليمية تجمع بين الطلاب و المدرسين والمتدربين و
-              المدربين المؤهلين للتدريب والتدريس اونلاين لتقديم الحصص الجماعية
-              والمحاضرات المباشرة توفر منصة معرفه كافة الادوات التي تمكنك من
-              النجاح في تقديم تجربة تعليمية فريدة لطلابك من اي مكان و في اي
-              زمان. انشىء صفحتك الشخصية على المنصة لتكون سيرتك الذاتية
-              الالكترونية التي تعرفك الى طلابك من كل أنحاء العالم. معرفه لخدمة
-              طلابنا المهتمين بالحصص الجماعية الاونلاين والدروس الخصوصية والتعلم
-              عن بعد.
-            </p>
+
+            {isError ? (
+              <p className="mt-7 text-[#E0E0E0]">
+                تعذر تحميل المقدمة حاليًا. الرجاء المحاولة لاحقًا.
+              </p>
+            ) : (
+              <div
+                className="mt-7 text-[#E0E0E0] text-lg leading-loose"
+                dangerouslySetInnerHTML={{ __html: introData?.content || "" }}
+              />
+            )}
           </div>
 
           <div className="mt-10 w-[60%] m-auto text-center gap-5 flex justify-center">
@@ -55,9 +59,7 @@ const Hero = () => {
 
           <div className="flex flex-col items-center gap-10 mt-20 md:flex-row">
             <div className="bg-gradient-to-bl from-[#050523] to-[#3D3B66] rounded-tl-[70px] rounded-lg p-5 text-white text-center flex-1">
-              <h3 className="font-bold text-3xl mb-9">
-                ماذا نُقدّم؟
-              </h3>
+              <h3 className="font-bold text-3xl mb-9">ماذا نُقدّم؟</h3>
               <div className="mb-10 text-lg m-auto font-normal text-[#C5C5C5]">
                 <ul className="list-disc list-inside pr-5 flex flex-col w-full leading-relaxed text-right">
                   <li>دروس مباشرة فردية أو جماعية</li>
@@ -66,7 +68,6 @@ const Hero = () => {
                   <li>مجتمع نشط يدعم التعلّم المستمر</li>
                 </ul>
               </div>
-
             </div>
 
             <div className="border-4 border-white rounded-full">
@@ -82,9 +83,7 @@ const Hero = () => {
             </div>
 
             <div className="bg-gradient-to-br from-[#050523] to-[#3D3B66] rounded-tr-[70px] rounded-lg p-5 text-white text-center flex-1">
-              <h3 className="font-bold text-3xl mb-9">
-                لماذا يختار الطلاب معرفة؟
-              </h3>
+              <h3 className="font-bold text-3xl mb-9">لماذا يختار الطلاب معرفة؟</h3>
               <div className="mb-10 text-lg m-auto font-normal text-[#C5C5C5]">
                 <ul className="list-disc list-inside pr-5 flex flex-col w-full leading-relaxed text-right">
                   <li>معلمون موثوقون و ذو خبرة</li>

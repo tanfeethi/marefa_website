@@ -1,31 +1,52 @@
+import { useMessage } from "../../hooks/useMessage";
+import { useValue } from "../../hooks/useValue";
+import { useVision } from "../../hooks/useVision";
 import Header from "../common/Header";
 
 const values = [
   {
+    hook: useVision,
     title: "الرؤية",
-    text: "أن نكون المنصة الرائدة في مجال التعليم الرقمي في العالم العربي، من خلال تمكين الأفراد من التعلم الفعّال، وتطوير مهاراتهم في بيئة تعليمية محفّزة، شاملة، موثوقة، ومرنة، تواكب تطلعات المستقبل وتساهم في بناء جيل معرفي متميز.",
     image: "/assets/Image1.jpg",
   },
   {
+    hook: useMessage,
     title: "الرسالة",
-    text: "نؤمن أن التعليم ليس مجرد نقل للمعلومات بل هو تجربة حية تبني الثقة وتطلق الفضول وتلهم التعلم تعمل على تمكين كل طالب من الوصول إلى المعرفة التي يستحقها من خلال بيئة رقمية آمنة وتفاعلية تجمع بين جودة المعلم وسهولة الوصول",
     image: "/assets/Image2.png",
   },
   {
+    hook: useValue,
     title: "قيمنا",
-    text: [
-      "الموثوقية في كل مضمون نقدمه",
-      "حرص متواصل لضمان جودة المحتوى",
-      "الشفافية",
-      "التعلم مدى الحياة",
-      "أدوات ذات جودة وأطر قياسية",
-      "إشراك المجتمع لخلق تجربة تعلم فريدة",
-    ],
     image: "/assets/Image3.png",
   },
 ];
 
 const StaticSection = () => {
+  const vision = useVision();
+  const message = useMessage();
+  const value = useValue();
+
+  const hooksMap = [vision, message, value];
+
+  const isLoading = hooksMap.some((h) => h.isLoading);
+  const isError = hooksMap.some((h) => h.isError);
+
+  if (isLoading) {
+    return (
+      <section className="py-20 text-center text-xl font-medium text-gray-500">
+        جارٍ تحميل البيانات...
+      </section>
+    );
+  }
+
+  if (isError) {
+    return (
+      <section className="py-20 text-center text-xl font-medium text-red-500">
+        حدث خطأ أثناء تحميل البيانات. يرجى المحاولة مرة أخرى لاحقًا.
+      </section>
+    );
+  }
+
   return (
     <section className="py-16 px-4 md:px-12 relative bg-white text-right overflow-hidden">
       <div className="absolute top-9 right-5 w-48 opacity-15 z-0 pointer-events-none">
@@ -44,36 +65,32 @@ const StaticSection = () => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {values.map((item, index) => (
-            <div
-              key={index}
-              className="border border-[#D6D6D6] rounded-lg overflow-hidden flex flex-col justify-between bg-white shadow-sm"
-            >
-              <div className="p-4">
-                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+          {values.map((item, index) => {
+            const { data } = hooksMap[index];
 
-                {Array.isArray(item.text) ? (
-                  <ul className="grid grid-cols-1 gap-x-4 gap-y-1 pr-5 text-sm text-gray-700 leading-relaxed list-disc list-inside">
-                    {item.text.map((point, i) => (
-                      <li className="text-lg" key={i}>{point}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    {item.text}
-                  </p>
-                )}
-              </div>
+            return (
+              <div
+                key={index}
+                className="border border-[#D6D6D6] rounded-lg overflow-hidden flex flex-col justify-between bg-white shadow-sm"
+              >
+                <div className="p-4">
+                  <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                  <div
+                    className="text-lg text-gray-700 leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: data?.content || "" }}
+                  />
+                </div>
 
-              <div>
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-72 object-cover rounded-lg"
-                />
+                <div>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-72 object-cover rounded-lg"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
