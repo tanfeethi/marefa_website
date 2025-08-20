@@ -46,7 +46,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
 
           <div className="flex-1 space-y-2">
             <div className="relative">
-              <h3 className="text-[28px] font-bold text-slate-800 leading-tight">
+              <h3 className="text-[28px] text-nowrap font-bold text-slate-800 leading-tight">
                 {name}
               </h3>
               <div
@@ -55,7 +55,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
               ></div>
             </div>
 
-            <p className="text-[22px] text-slate-600 font-medium tracking-wide">
+            <p className="text-[22px] text-nowrap text-slate-600 font-medium tracking-wide">
               {role}
             </p>
 

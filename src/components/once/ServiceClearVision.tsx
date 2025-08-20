@@ -108,7 +108,7 @@ const AboutClearVision = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
+            {/* <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
                 src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
                 alt="ثامر بن معمر"
@@ -116,20 +116,9 @@ const AboutClearVision = () => {
               />
               <h3 className="text-lg font-bold">ثامر بن معمر</h3>
               <p className="text-gray-600">نائب االرئيس التنفيذي</p>
-            </div>
+            </div> */}
 
             {/* Card 3 */}
-            <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
-              <img
-                src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
-                alt="عبدالله الماضي"
-                className="w-30 h-30 rounded-full object-cover mb-4"
-              />
-              <h3 className="text-lg font-bold">عبدالله الماضي</h3>
-              <p className="text-gray-600">مدير الاداره المالية</p>
-            </div>
-
-            {/* Card 4 */}
             <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
                 src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
@@ -140,6 +129,17 @@ const AboutClearVision = () => {
               <p className="text-gray-600">مدير التسويق</p>
             </div>
 
+            {/* Card 4 */}
+            <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
+              <img
+                src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                alt="عبدالله الماضي"
+                className="w-30 h-30 rounded-full object-cover mb-4"
+              />
+              <h3 className="text-lg font-bold">عبدالله الماضي</h3>
+              <p className="text-gray-600">مدير الاداره المالية</p>
+            </div>
+            
             {/* Card 5 */}
             <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
@@ -152,7 +152,7 @@ const AboutClearVision = () => {
             </div>
 
             {/* Card 6 */}
-            <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
+            {/* <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
                 src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
                 alt="محمد العبيد"
@@ -160,7 +160,7 @@ const AboutClearVision = () => {
               />
               <h3 className="text-lg font-bold">محمد العبيد</h3>
               <p className="text-gray-600">مدير إدارة العمليات التقنية</p>
-            </div>
+            </div> */}
           </div>
         </WrapperContainer>
       </section>
