@@ -5,7 +5,7 @@ import WrapperContainer from "../common/WrapperContainer";
 const AboutClearVision = () => {
   return (
     <>
-      <section className="hidden md:block">
+      <section className="hidden xl:block">
         <WrapperContainer>
           {/* Header section */}
           <div className="w-full py-16">
@@ -36,7 +36,7 @@ const AboutClearVision = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-3 m-auto">
+              <div className="grid grid-cols-3 w-[95%] m-auto">
                 <div className="p-10">
                   <div className=" m-auto">
                     <TeamMemberCard
@@ -67,18 +67,6 @@ const AboutClearVision = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="grid grid-cols-2 w-[70%] m-auto">
-                {/* <div className="p-10">
-                  <div className=" m-auto">
-                    <TeamMemberCard
-                      image="assets/team/Mohamed.jpg"
-                      name="محمد الحصيان"
-                      role="مدير التسويق"
-                    />
-                  </div>
-                </div> */}
-              </div>
             </div>
           </div>
         </WrapperContainer>
@@ -95,72 +83,50 @@ const AboutClearVision = () => {
               description={`في "معرفة"، تبدأ الرحلة التعليمية من قناعة راسخة لدى فريق القيادة بأن التعليم هو أساس المستقبل. نشارككم التزامنا ببناء منصة تعليمية تفاعلية، موثوقة، وشاملة تدعم الطلاب والمعلمين، وتدفع بالمجتمع نحو التعلّم المستمر والتميّز`}
             />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
             {/* Card 1 */}
             <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
-                src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                src="assets/team/samer.jpg"
                 alt="ثامر بن معمر"
-                className="w-30 h-30 rounded-full object-cover mb-4"
+                className="w-30 h-30 rounded-full object-fill mb-4"
               />
               <h3 className="text-lg font-bold">ثامر بن معمر</h3>
               <p className="text-gray-600">الرئيس التنفيذي</p>
             </div>
 
             {/* Card 2 */}
-            {/* <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
-              <img
-                src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
-                alt="ثامر بن معمر"
-                className="w-30 h-30 rounded-full object-cover mb-4"
-              />
-              <h3 className="text-lg font-bold">ثامر بن معمر</h3>
-              <p className="text-gray-600">نائب االرئيس التنفيذي</p>
-            </div> */}
-
-            {/* Card 3 */}
             <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
-                src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                src="assets/team/Mohamed.jpg"
                 alt="محمد الحصيان"
-                className="w-30 h-30 rounded-full object-cover mb-4"
+                className="w-30 h-30 rounded-full object-fill mb-4"
               />
               <h3 className="text-lg font-bold">محمد الحصيان</h3>
               <p className="text-gray-600">مدير التسويق</p>
             </div>
 
-            {/* Card 4 */}
+            {/* Card 3 */}
             <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
-                src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                src="assets/team/abdallah.jpg"
                 alt="عبدالله الماضي"
-                className="w-30 h-30 rounded-full object-cover mb-4"
+                className="w-30 h-30 rounded-full object-fill mb-4"
               />
               <h3 className="text-lg font-bold">عبدالله الماضي</h3>
               <p className="text-gray-600">مدير الاداره المالية</p>
             </div>
-            
-            {/* Card 5 */}
+
+            {/* Card 4 */}
             <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
-                src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+                src="assets/team/khalid.jpg"
                 alt="خالد التويجري"
-                className="w-30 h-30 rounded-full object-cover mb-4"
+                className="w-30 h-30 rounded-full object-fill mb-4"
               />
               <h3 className="text-lg font-bold">خالد التويجري</h3>
               <p className="text-gray-600">مدير أنظمة المعلومات</p>
             </div>
-
-            {/* Card 6 */}
-            {/* <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
-              <img
-                src="https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
-                alt="محمد العبيد"
-                className="w-30 h-30 rounded-full object-cover mb-4"
-              />
-              <h3 className="text-lg font-bold">محمد العبيد</h3>
-              <p className="text-gray-600">مدير إدارة العمليات التقنية</p>
-            </div> */}
           </div>
         </WrapperContainer>
       </section>

@@ -27,7 +27,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
       <div className="absolute inset-0 bg-gradient-to-br "></div>
 
       <div className="relative z-10 p-6 pr-14 h-full">
-        <div className="w-[85%] m-auto flex items-center gap-6 h-full">
+        <div className="w-[70%] m-auto flex items-center gap-6 h-full">
           <div className="relative group">
             <div
               className="absolute inset-0 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-300"
@@ -36,17 +36,19 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
               }}
             ></div>
             <div className="relative bg-white p-1 rounded-xl shadow-2xl">
-              <img
-                src={image}
-                alt={name}
-                className="w-[120px] h-[120px] rounded-lg object-fit object-center shadow-lg transition-transform duration-300 group-hover:scale-105"
-              />
+              <div className="w-[90px] aspect-square">
+                <img
+                  src={image}
+                  alt={name}
+                  className="w-full h-full rounded-lg object-fill object-center shadow-lg transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
             </div>
-          </div> 
+          </div>
 
           <div className="flex-1 space-y-2">
             <div className="relative">
-              <h3 className="text-[28px] text-nowrap font-bold text-slate-800 leading-tight">
+              <h3 className="text-[20px] text-nowrap font-bold text-slate-800 leading-tight">
                 {name}
               </h3>
               <div
@@ -55,7 +57,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
               ></div>
             </div>
 
-            <p className="text-[22px] text-nowrap text-slate-600 font-medium tracking-wide">
+            <p className="text-[18px] text-nowrap text-slate-600 font-medium tracking-wide">
               {role}
             </p>
 
