@@ -19,11 +19,12 @@ const Navbar = () => {
     setIsOpen((prev) => !prev);
   };
 
-  // const toggleLanguage = () => {
-  //   const newLang = i18n.language === "en" ? "ar" : "en";
-  //   changeLanguage(newLang);
-  // };
+  // Auto close drawer when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
+  // Scroll detection
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -39,7 +40,7 @@ const Navbar = () => {
           ? "fixed top-0 bg-[#F19704] shadow-md"
           : `absolute top-0 ${
               lastSegment === "home"
-                ? `${isOpen ? "bg-[#F19704]" : "bg-transparent"}` //bg-transparent
+                ? `${isOpen ? "bg-[#F19704]" : "bg-transparent"}`
                 : "bg-[#F19704]"
             }`
       }`}
@@ -68,11 +69,7 @@ const Navbar = () => {
 
           {/* Logo - mobile: order-last, desktop: order-first */}
           <div className="order-last lg:order-first">
-            <img
-              src={logo}
-              alt="logo"
-              className="h-16 w-16"
-            />
+            <img src={logo} alt="logo" className="h-16 w-16" />
           </div>
 
           {/* Center: Nav Links */}
@@ -92,7 +89,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Right: Language & Contact */}
+          {/* Right: Contact */}
           <div className="hidden lg:flex gap-4 items-center">
             <NavLink
               to="/contact-us"
@@ -122,6 +119,7 @@ const Navbar = () => {
                   ? "/contact-us"
                   : `/${item}`
               }
+              onClick={() => setIsOpen(false)} // ✅ closes drawer
               className={({ isActive }) =>
                 isActive
                   ? "btn btn-ghost py-2 rounded-sm text-white font-bold underline"
@@ -134,25 +132,13 @@ const Navbar = () => {
 
           <NavLink
             to="/contact-us"
+            onClick={() => setIsOpen(false)} // ✅ closes drawer
             className="btn text-white px-5 py-2 border-2 rounded-sm border-white shadow-none flex items-center gap-2 w-fit"
           >
             <FaRegEnvelope />
-
             {t("nav.contact")}
           </NavLink>
         </div>
-
-        {/* Mobile Language Toggle */}
-        {/* <div className="grid gap-4 lg:hidden px-4 mt-3">
-          <div className="flex gap-5">
-            <button
-              onClick={toggleLanguage}
-              className="bg-white p-5 rounded-full h-[45px] w-[45px] flex items-center justify-center font-bold text-[var(--primary)] cursor-pointer"
-            >
-              {i18n.language === "en" ? "ع" : "EN"}
-            </button>
-          </div>
-        </div> */}
       </div>
     </nav>
   );

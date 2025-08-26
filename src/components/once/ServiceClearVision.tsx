@@ -125,7 +125,7 @@ const AboutClearVision = () => {
                 className="w-30 h-30 rounded-full object-fill mb-4"
               />
               <h3 className="text-lg font-bold">خالد التويجري</h3>
-              <p className="text-gray-600">مدير أنظمة المعلومات</p>
+              <p className="text-gray-600">مدير إدارة العمليات التقنية</p>
             </div>
           </div>
         </WrapperContainer>

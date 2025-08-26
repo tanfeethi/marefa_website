@@ -44,7 +44,7 @@ const Container = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pb-5">
               <button className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors cursor-pointer">
                 <div className="">
                   <div className="text-xs">تنزيل من</div>
@@ -60,7 +60,7 @@ const Container = () => {
               </button>
 
               <button className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors cursor-pointer">
-                <div className="">
+                <div>
                   <div className="text-xs">احصل عليه من</div>
                   <div className="text-lg font-semibold">Google Play</div>
                 </div>
