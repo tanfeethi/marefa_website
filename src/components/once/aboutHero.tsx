@@ -69,8 +69,11 @@ const AboutHero = () => {
               </button>
               <div className="p-11 grid grid-cols-1 gap-5 xl:grid-cols-2 items-center">
                 <div>
-                  <p className="text-5xl font-bold mb-3 leading-16">
-                    مرحبًا بك في منصة معرفة طريقك <br /> نحو تعلّم ذكي وفعّال
+                  <p className="text-3xl font-semibold mb-3 md:leading-16 md:text-5xl">
+                    مرحبًا بك في منصة معرفة
+                  </p>
+                  <p className="text-3xl font-semibold mb-3 md:leading-16 md:text-5xl">
+                    طريقك نحو تعلم ذكي وفعّال
                   </p>
                 </div>
                 <div

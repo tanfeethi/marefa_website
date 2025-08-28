@@ -10,41 +10,49 @@ const Container = () => {
       }}
     >
       <WrapperContainer>
-        <div className="flex flex-col content-between lg:flex-row-reverse items-center gap-12">
+        <div className="flex flex-col content-between lg:flex-row-reverse items-center gap-12 mt-10">
           <div className="justify-center lg:justify-end hidden xl:flex">
-            <img src="/assets/getApp.webp" alt="" className="w-[50%] h-full" />
+            <img
+              src="/assets/getApp.webp"
+              alt=""
+              className="w-[60%] h-full -mt-14"
+              draggable={false}
+            />
           </div>
 
-          <div className="text-white text-center lg:text-right w-full">
+          <div className="text-white text-2xl lg:text-right w-full mt-16 md:text-5xl">
             <Header
-              title="قم بتحميل تطبيق 'معرفة' وابدأ رحلتك التعليمية من أي مكان!"
+              title="اكتشف عالمًا جديدًا من التعلم مع تطبيق معرفة"
               subtitle=""
               className="text-white mb-8"
               subtitleClassName="text-lg font-normal mt-4"
             />
 
             <div className="space-y-3 mb-8 text-right ">
-              <div>
-                حمّل تطبيق "معرفة" وإبدأ رحلتك التعليمية من أي مكان! مع العديد
-                من المميزات
+              <div className="text-lg">
+                تعلّم في أي وقت ومن أي مكان مع محتوى تفاعلي شيّق ومتابعة دقيقة
+                لإنجازاتك
               </div>
               <div className="flex items-center justify-start gap-3">
                 <div className="w-2 h-2 bg-white"></div>
+                <span className="text-lg">مئات الدورات التعليمية المتنوعة</span>
+              </div>
+              <div className="flex items-center justify-start gap-3">
+                <div className="w-2 h-2 bg-white"></div>
+                <span className="text-lg">محتوى يواكب احتياجاتك</span>
+              </div>
+              <div className="flex items-center justify-start gap-3">
+                <div className="w-2 h-2 bg-white"></div>
+                <span className="text-lg">متابعة تقدمك خطوة بخطوة</span>
+              </div>
+              <div className="flex items-center justify-start gap-3">
                 <span className="text-lg">
-                  الوصول إلى مئات الدورات التعليمية المتنوعة
+                  حمّل التطبيق الآن وابدأ رحلتك نحو التفوق
                 </span>
-              </div>
-              <div className="flex items-center justify-start gap-3">
-                <div className="w-2 h-2 bg-white"></div>
-                <span className="text-lg">محتوى تعليمي تفاعلي وجذاب</span>
-              </div>
-              <div className="flex items-center justify-start gap-3">
-                <div className="w-2 h-2 bg-white"></div>
-                <span className="text-lg">متابعة تقدمك التعليمي وإنجازاتك</span>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pb-5">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pb-5 w-[65%] xl:w-full">
               <button className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors cursor-pointer">
                 <div className="">
                   <div className="text-xs">تنزيل من</div>

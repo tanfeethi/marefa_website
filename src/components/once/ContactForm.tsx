@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+import { FiMail, FiMapPin } from "react-icons/fi";
 import useContactForm from "../../hooks/useContactForm";
 
 const ContactForm = () => {
@@ -52,8 +52,8 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-          <div className="bg-white rounded-xl p-6 border border-[#F197041A] hover:shadow-md hover:border-[#F19704] transition-all duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+          {/* <div className="bg-white rounded-xl p-6 border border-[#F197041A] hover:shadow-md hover:border-[#F19704] transition-all duration-300">
             <div className="flex items-center justify-between mb-2">
               <span className="text-gray-700 font-medium">رقم الهاتف</span>
               <div className="text-[#F19704] text-xl">
@@ -69,7 +69,7 @@ const ContactForm = () => {
             >
               اتصل بنا
             </button>
-          </div>
+          </div> */}
 
           <div className="bg-white rounded-xl p-6 border border-[#F197041A] hover:shadow-md hover:border-[#F19704] transition-all duration-300">
             <div className="flex items-center justify-between mb-2">

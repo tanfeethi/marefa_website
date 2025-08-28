@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./Header";
-import { FaMinus, FaPlus } from "react-icons/fa";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 import useFaqs from "../../hooks/useFaqs";
 
 const FAQs = () => {
@@ -31,7 +31,7 @@ const FAQs = () => {
         title="الأسئلة"
         subtitle="الشائعة"
         className="text-center text-3xl md:text-4xl mb-6"
-        subtitleClassName="text-center text-3xl md:text-4xl text-[#3F2571] border-b-8 border-b-[#3F2571] mt-2"
+        subtitleClassName="text-center text-3xl md:text-4xl text-[#3F2571] border-b-2 border-b-[#3F2571] mt-2 md:border-b-8"
       />
 
       <div className="space-y-4">
@@ -46,24 +46,28 @@ const FAQs = () => {
                   onClick={() => toggleFAQ(index)}
                   className="w-full text-right px-4 py-4 flex justify-between items-center"
                 >
-                  <span className="text-xl font-medium text-[#030303]">
+                  <span className="text-[16px] font-semibold text-[#030303] md:text-xl">
                     {faq.question}
                   </span>
                   <span className="text-white bg-[#F19704] rounded p-1.5">
-                    {activeIndex === index ? <FaMinus /> : <FaPlus />}
+                    {activeIndex === index ? <FaArrowUp /> : <FaArrowDown />}
                   </span>
                 </button>
 
-                {activeIndex === index && (
-                  <>
-                    <div className="px-4">
-                      <div className="border-b border-[#C5C5C5] w-full"></div>
-                    </div>
-                    <div className="px-4 pb-4 pt-4 text-lg text-[#727272]">
-                      {faq.answer}
-                    </div>
-                  </>
-                )}
+                <div
+                  className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                    activeIndex === index
+                      ? "max-h-96 opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="px-4">
+                    <div className="border-b border-[#C5C5C5] w-full"></div>
+                  </div>
+                  <div className="px-4 pb-4 pt-4 text-[#727272]">
+                    {faq.answer}
+                  </div>
+                </div>
               </div>
             ))}
       </div>

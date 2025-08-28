@@ -1,9 +1,4 @@
-import {
-  FaArrowUp,
-  FaEnvelope,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+import { FaArrowUp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import WrapperContainer from "../common/WrapperContainer";
 import { Link } from "react-router";
 
@@ -75,7 +70,7 @@ const Footer = () => {
               </span>
             </div>
 
-            <div className="flex items-center gap-2 border border-[#8B68CE] bg-opacity-50 px-3 py-2 rounded transition-all hover:bg-purple-700 hover:text-white group cursor-pointer">
+            {/* <div className="flex items-center gap-2 border border-[#8B68CE] bg-opacity-50 px-3 py-2 rounded transition-all hover:bg-purple-700 hover:text-white group cursor-pointer">
               <FaPhoneAlt className="h-4 w-4 text-[#8B68CE] group-hover:text-white transition-colors" />
               <span
                 dir="ltr"
@@ -83,7 +78,7 @@ const Footer = () => {
               >
                 +966569601112
               </span>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-2 border border-[#8B68CE] bg-opacity-50 px-3 py-2 rounded transition-all hover:bg-purple-700 hover:text-white group cursor-pointer">
               <FaMapMarkerAlt className="h-4 w-4 text-[#8B68CE] group-hover:text-white transition-colors" />

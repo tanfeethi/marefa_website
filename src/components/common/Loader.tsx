@@ -13,7 +13,7 @@ const FullScreenLoader = ({
 }: FullScreenLoaderProps) => {
   return (
     <div
-      className={`min-h-screen w-full flex items-center justify-center ${backgroundColor}`}
+      className={`min-h-screen absolute w-full flex items-center justify-center z-50 ${backgroundColor}`}
     >
       <div className="text-center">
         {/* مؤشّر التحميل النابض */}
