@@ -5,16 +5,16 @@ import WrapperContainer from "../common/WrapperContainer";
 const services = [
   {
     title: "دروس خاصة وجماعية تفاعلية تناسب احتياجاتك الأكاديمية",
-    image: "/assets/blog.png",
+    image: "/assets/aboutUs.webp",
   },
   {
     title:
       "تقنيات متطورة: اتصال صوتي ومرئي رفع ملفات وصور ومجموعة أدوات تعليمية حديثة.",
-    image: "/assets/personImage.png",
+    image: "/assets/aboutUs2.webp",
   },
   {
     title: "تجربة تعليمية ثرية تساعدك على الفهم العميق والتطبيق العملي.",
-    image: "/assets/personImage2.png",
+    image: "/assets/aboutUs3.webp",
   },
   {
     title: "محتوى متنوع يغطي جميع المراحل الدراسية.",

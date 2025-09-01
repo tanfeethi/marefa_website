@@ -7,17 +7,17 @@ const values = [
   {
     hook: useVision,
     title: "الرؤية",
-    image: "/assets/Image1.jpg",
+    image: "/assets/vision.webp",
   },
   {
     hook: useMessage,
     title: "الرسالة",
-    image: "/assets/Image2.png",
+    image: "/assets/message.webp",
   },
   {
     hook: useValue,
     title: "قيمنا",
-    image: "/assets/Image3.png",
+    image: "/assets/values.webp",
   },
 ];
 
@@ -85,7 +85,7 @@ const StaticSection = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-72 object-cover rounded-lg"
+                    className="w-full h-96 object-cover rounded-lg"
                   />
                 </div>
               </div>

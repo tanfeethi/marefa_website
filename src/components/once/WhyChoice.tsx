@@ -36,7 +36,7 @@ const WhyChoice = () => {
           <div className="p-4 flex flex-col md:flex-row rounded-xl overflow-hidden">
             <div className="md:w-1/2">
               <img
-                src="/assets/personImage.png"
+                src="/assets/whyUs.webp"
                 alt="student"
                 className="w-full h-full object-cover"
               />
@@ -91,7 +91,7 @@ const WhyChoice = () => {
           <div className="p-4 flex flex-col md:flex-row-reverse rounded-xl overflow-hidden">
             <div className="md:w-1/2">
               <img
-                src="/assets/personImage2.png"
+                src="/assets/whyUs2.webp"
                 alt="teacher"
                 className="w-full h-full object-cover"
               />

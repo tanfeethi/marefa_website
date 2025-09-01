@@ -5,7 +5,7 @@ import WrapperContainer from "../common/WrapperContainer";
 const services = [
   {
     title: "توافق كامل مع مستواك الأكاديمي وخلفيتك الدراسية.",
-    image: "/assets/blog.png",
+    image: "/assets/whyUs.webp",
   },
   {
     title: "دعم مستمر يساعدك على النجاح في دراستك والتأهل لمراحل متقدمة.",
@@ -13,7 +13,7 @@ const services = [
   },
   {
     title: "مرونة في الوصول إلى الدروس من أي مكان وفي أي وقت.",
-    image: "/assets/personImage3.jpg",
+    image: "/assets/whyUs2.webp",
   },
 ];
 
