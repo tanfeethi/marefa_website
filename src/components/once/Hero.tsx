@@ -33,8 +33,8 @@ const Hero = () => {
           <div className="w-[80%] m-auto text-center mt-8 md:w-[60%]">
             <h1 className="text-3xl font-bold md:leading-20 md:text-6xl">
               التعليم لم يعد مقيدًا بالفصول… مع معرفة يمكنك أن تصنع تجربتك
-              التعليمية الخاصة بك
-              <span className="text-[#F19704]"> في أي وقت وأينما كنت.</span>
+              التعليمية الخاصة بك في أي وقت وأينما كنت و  تعلم كما تحب متى تشاء ومن أي مكان لتصنع مسارك 
+              <span className="text-[#F19704]"> نحو مستقبل أفضل </span>
             </h1>
 
             {isError ? (

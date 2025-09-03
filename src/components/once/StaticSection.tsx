@@ -85,7 +85,7 @@ const StaticSection = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-96 object-cover rounded-lg"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
               </div>
