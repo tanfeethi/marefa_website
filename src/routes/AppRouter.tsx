@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import NotFound from "../pages/NotFound";
 import { lazy } from "react";
+import TestPage from "../pages/TestPage";
 
 // Layout
 const Layout = lazy(() => import("../components/layout/Layout"));
@@ -30,6 +31,8 @@ const router = createBrowserRouter([
       { path: "privacy", element: <Privacy /> },
       { path: "rules", element: <Rules /> },
       { path: "why-us", element: <WhyUs /> },
+
+      { path: "test", element: <TestPage /> },
 
       { path: "*", element: <NotFound /> },
     ],

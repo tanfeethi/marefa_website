@@ -1,6 +1,6 @@
 import Header from "../common/Header";
-import TeamMemberCard from "../common/TeamMemberCard";
 import WrapperContainer from "../common/WrapperContainer";
+import TeamCard from "./TeamCard";
 
 const AboutClearVision = () => {
   return (
@@ -18,55 +18,37 @@ const AboutClearVision = () => {
           </div>
 
           {/* Background image section */}
-          <div className="w-full relative my-5 mb-32">
-            <div
-              className="w-full h-full bg-no-repeat bg-center"
-              style={{
-                backgroundImage: "url('/assets/GroupFrame.png')",
-                backgroundSize: "100% 100%",
-              }}
-            >
-              <div className="p-10">
-                <div className="w-[30%] m-auto">
-                  <TeamMemberCard
-                    image="assets/team/samer.jpg"
-                    name="ثامر بن معمر"
-                    role="الرئيس التنفيذي"
-                  />
-                </div>
-              </div>
 
-              <div className="grid grid-cols-3 w-[95%] m-auto">
-                <div className="p-10">
-                  <div className=" m-auto">
-                    <TeamMemberCard
-                      image="assets/team/Mohamed.jpg"
-                      name="محمد الحصيان"
-                      role="مدير التسويق"
-                    />
-                  </div>
-                </div>
-
-                <div className="p-10">
-                  <div className=" m-auto">
-                    <TeamMemberCard
-                      image="assets/team/abdallah.jpg"
-                      name="عبدالله الماضي"
-                      role="مدير الأداره المالية"
-                    />
-                  </div>
-                </div>
-
-                <div className="p-10">
-                  <div className=" m-auto">
-                    <TeamMemberCard
-                      image="assets/team/khalid.jpg"
-                      name="خالد التويجري"
-                      role="مدير إدارة العمليات التقنية"
-                    />
-                  </div>
-                </div>
-              </div>
+          <div
+            className=" w-full h-[600px] flex flex-col justify-around items-center bg-no-repeat bg-center p-5"
+            style={{
+              backgroundImage: "url('/assets/GroupFrame.png')",
+              backgroundSize: "100% 100%",
+            }}
+          >
+            <div className="flex justify-around flex-wrap min-w-full mx-auto">
+              <TeamCard
+                image="/assets/team/samer.jpg"
+                name="ثامر بن معمر"
+                role="الرئيس التنفيذي"
+              />
+            </div>
+            <div className="flex justify-around flex-wrap min-w-full mx-auto">
+              <TeamCard
+                image="/assets/team/Mohamed.jpg"
+                name="محمد الحصيان"
+                role="مدير التسويق"
+              />
+              <TeamCard
+                image="/assets/team/abdallah.jpg"
+                name="عبدالله الماضي"
+                role="مدير الأداره المالية"
+              />
+              <TeamCard
+                image="/assets/team/khalid.jpg"
+                name="خالد التويجري"
+                role="مدير إدارة العمليات"
+              />
             </div>
           </div>
         </WrapperContainer>
