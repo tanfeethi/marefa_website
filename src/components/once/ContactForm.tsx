@@ -11,7 +11,7 @@ const ContactForm = () => {
     massage: "",
   });
 
-  const { mutate, isPending } = useContactForm({
+  const { mutate, isPending, error } = useContactForm({
     onSuccess: () => {
       setForm({
         firstName: "",
@@ -31,18 +31,21 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const fullName = `${form.firstName} ${form.lastName}`;
+
+    const fullName = `${form.firstName} ${form.lastName}`.trim();
+
     mutate({
-      name: fullName.trim(),
+      name: fullName,
       email: form.email,
       phone: form.phone,
-      massage: form.massage,
+      message: form.massage, // ✅ correct mapping
     });
   };
 
   return (
-    <section className="py-16 px-4 md:px-8">
+    <section className="py-16 px-4 md:px-8 mt-7">
       <div className="border border-[#F197041A] rounded-xl p-6 md:p-10">
+        {/* Header */}
         <div className="mb-10">
           <h2 className="text-3xl md:text-4xl font-bold">
             تواصل <span className="text-[#3F2571] underline">معنا</span>
@@ -52,25 +55,8 @@ const ContactForm = () => {
           </p>
         </div>
 
+        {/* Contact Info */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-          {/* <div className="bg-white rounded-xl p-6 border border-[#F197041A] hover:shadow-md hover:border-[#F19704] transition-all duration-300">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-gray-700 font-medium">رقم الهاتف</span>
-              <div className="text-[#F19704] text-xl">
-                <FiPhone />
-              </div>
-            </div>
-            <p dir="ltr" className="text-gray-600 text-sm mb-4">
-              +966569601112
-            </p>
-            <button
-              onClick={() => (window.location.href = "tel:+966569601112")}
-              className="text-[#F19704] border border-[#F19704] rounded-md px-4 py-1 text-sm hover:bg-[#F19704] hover:text-white transition"
-            >
-              اتصل بنا
-            </button>
-          </div> */}
-
           <div className="bg-white rounded-xl p-6 border border-[#F197041A] hover:shadow-md hover:border-[#F19704] transition-all duration-300">
             <div className="flex items-center justify-between mb-2">
               <span className="text-gray-700 font-medium">العنوان</span>
@@ -105,10 +91,12 @@ const ContactForm = () => {
           </div>
         </div>
 
+        {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
           className="bg-white rounded-xl p-6 space-y-6 border border-[#F197041A]"
         >
+          {/* Name */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -119,7 +107,7 @@ const ContactForm = () => {
                 name="firstName"
                 value={form.firstName}
                 onChange={handleChange}
-                className="w-full border rounded-md px-4 py-2 text-sm placeholder-gray-400"
+                className="w-full border border-[#F19704] rounded-md px-4 py-2 text-sm placeholder-gray-400"
                 placeholder="أدخل الاسم الأول الخاص بك هنا"
                 required
               />
@@ -133,13 +121,14 @@ const ContactForm = () => {
                 name="lastName"
                 value={form.lastName}
                 onChange={handleChange}
-                className="w-full border rounded-md px-4 py-2 text-sm placeholder-gray-400"
+                className="w-full border border-[#F19704] rounded-md px-4 py-2 text-sm placeholder-gray-400"
                 placeholder="أدخل اسم العائلة الخاص بك هنا"
                 required
               />
             </div>
           </div>
 
+          {/* Email & Phone */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -150,27 +139,28 @@ const ContactForm = () => {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full border rounded-md px-4 py-2 text-sm placeholder-gray-400"
+                className="w-full border border-[#F19704] rounded-md px-4 py-2 text-sm placeholder-gray-400"
                 placeholder="أدخل بريدك الإلكتروني"
                 required
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                رقم الهاتف
+                رقم الجوال
               </label>
               <input
                 type="text"
                 name="phone"
                 value={form.phone}
                 onChange={handleChange}
-                className="w-full border rounded-md px-4 py-2 text-sm placeholder-gray-400"
+                className="w-full border border-[#F19704] rounded-md px-4 py-2 text-sm placeholder-gray-400"
                 placeholder="أدخل رقم هاتفك"
                 required
               />
             </div>
           </div>
 
+          {/* Message */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               الرسالة
@@ -179,12 +169,20 @@ const ContactForm = () => {
               name="massage"
               value={form.massage}
               onChange={handleChange}
-              className="w-full border rounded-md px-4 py-2 text-sm placeholder-gray-400 h-32 resize-none"
+              className="w-full border rounded-md px-4 border-[#F19704] py-2 text-sm placeholder-gray-400 h-32 resize-none"
               placeholder="أدخل رسالتك هنا.."
               required
             />
           </div>
 
+          {/* Error Message */}
+          {error && (
+            <div className="bg-red-200 text-red-900 w-full p-3 text-center rounded-md font-semibold">
+              {error.message}
+            </div>
+          )}
+
+          {/* Submit Button */}
           <div className="text-end">
             <button
               type="submit"

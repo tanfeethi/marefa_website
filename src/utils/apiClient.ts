@@ -5,8 +5,9 @@ const apiClient = axios.create({
 });
 
 apiClient.interceptors.request.use((config) => {
-  const lang = localStorage.getItem("lang");
+  const lang = "ar";
   if (lang) {
+    config.headers["accept-language"] = lang;
     config.headers["lang"] = lang;
   }
   return config;

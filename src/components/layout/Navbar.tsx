@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router";
+import { NavLink, useLocation, useNavigate } from "react-router";
 import logo from "/public/assets/logo.png";
 import WrapperContainer from "../common/WrapperContainer";
 import { useTranslation } from "react-i18next";
@@ -8,6 +8,7 @@ import { getLastPathSegment } from "../../hooks/helpers/getLastPathSegment";
 import { FaRegEnvelope } from "react-icons/fa";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { t } = useTranslation("nav");
@@ -69,7 +70,12 @@ const Navbar = () => {
 
           {/* Logo - mobile: order-last, desktop: order-first */}
           <div className="order-last lg:order-first">
-            <img src={logo} alt="logo" className="h-16 w-16" />
+            <img
+              src={logo}
+              alt="logo"
+              className="h-16 w-16 cursor-pointer"
+              onClick={() => navigate("/")}
+            />
           </div>
 
           {/* Center: Nav Links */}
