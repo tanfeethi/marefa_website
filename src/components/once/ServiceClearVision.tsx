@@ -20,7 +20,7 @@ const AboutClearVision = () => {
           {/* Background image section */}
 
           <div
-            className=" w-full h-[600px] flex flex-col justify-around items-center bg-no-repeat bg-center p-5"
+            className="w-full h-[600px] flex flex-col justify-around items-center bg-no-repeat bg-center p-8"
             style={{
               backgroundImage: "url('/assets/GroupFrame.png')",
               backgroundSize: "100% 100%",
@@ -66,7 +66,6 @@ const AboutClearVision = () => {
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
-            {/* Card 1 */}
             <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
                 src="assets/team/samer.jpg"
@@ -77,7 +76,6 @@ const AboutClearVision = () => {
               <p className="text-gray-600">الرئيس التنفيذي</p>
             </div>
 
-            {/* Card 2 */}
             <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
                 src="assets/team/Mohamed.jpg"
@@ -88,7 +86,6 @@ const AboutClearVision = () => {
               <p className="text-gray-600">مدير التسويق</p>
             </div>
 
-            {/* Card 3 */}
             <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
                 src="assets/team/abdallah.jpg"
@@ -99,7 +96,6 @@ const AboutClearVision = () => {
               <p className="text-gray-600">مدير الاداره المالية</p>
             </div>
 
-            {/* Card 4 */}
             <div className="flex flex-col items-center text-center p-6 shadow-lg rounded-lg bg-white">
               <img
                 src="assets/team/khalid.jpg"

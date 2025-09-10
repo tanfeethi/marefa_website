@@ -18,7 +18,7 @@ const services = [
   },
   {
     title: "محتوى متنوع يغطي جميع المراحل الدراسية.",
-    image: "/assets/personImage3.jpg",
+    image: "/assets/personImage3.jfif",
   },
 ];
 

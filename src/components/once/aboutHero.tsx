@@ -55,9 +55,9 @@ const AboutHero = () => {
   return (
     <section className="mt-30 text-right">
       <WrapperContainer>
-        <div className="w-full relative my-5">
+        <div className="w-full relative my-5 p-5">
           <div
-            className="w-full xl:h-[400px] bg-no-repeat bg-center"
+            className="w-full xl:h-[400px] bg-no-repeat bg-center p-8"
             style={{
               backgroundImage: "url('/assets/GroupFrame.png')",
               backgroundSize: "100% 100%",

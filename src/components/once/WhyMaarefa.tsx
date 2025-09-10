@@ -9,7 +9,7 @@ const services = [
   },
   {
     title: "دعم مستمر يساعدك على النجاح في دراستك والتأهل لمراحل متقدمة.",
-    image: "/assets/personImage.png",
+    image: "/assets/personImage.jfif",
   },
   {
     title: "مرونة في الوصول إلى الدروس من أي مكان وفي أي وقت.",
