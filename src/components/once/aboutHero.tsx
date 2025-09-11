@@ -9,7 +9,7 @@ const AboutHero = () => {
   const renderSkeleton = () => (
     <section className="mt-30 text-right">
       <WrapperContainer>
-        <div className="w-full relative my-5">
+        <div className="w-full relative my-5 ">
           <div
             className="w-full xl:h-[400px] bg-no-repeat bg-center"
             style={{
@@ -17,7 +17,7 @@ const AboutHero = () => {
               backgroundSize: "100% 100%",
             }}
           >
-            <div className="flex items-center h-full">
+            <div className="flex items-center h-full p-5">
               <div className="p-11 grid grid-cols-1 gap-5 xl:flex-col-2 animate-pulse">
                 <div>
                   <div className="w-32 h-10 bg-gray-200 rounded-xl mb-3"></div>
