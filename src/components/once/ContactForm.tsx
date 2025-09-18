@@ -154,7 +154,7 @@ const ContactForm = () => {
                 value={form.phone}
                 onChange={handleChange}
                 className="w-full border border-[#F19704] rounded-md px-4 py-2 text-sm placeholder-gray-400"
-                placeholder="أدخل رقم هاتفك"
+                placeholder="أدخل رقم الجوال"
                 required
               />
             </div>
