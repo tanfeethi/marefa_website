@@ -53,8 +53,17 @@ const Container = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pb-5 w-[65%] xl:w-full">
-              <button className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors cursor-pointer">
-                <div className="">
+              <button
+                onClick={() => {
+                  window.open(
+                    "https://apps.apple.com/eg/app/%D9%85%D9%86%D8%B5%D8%A9-%D9%85%D8%B9%D8%B1%D9%81%D8%A9/id1620060542",
+                    "_blank", // opens in new tab
+                    "noopener,noreferrer" // security options
+                  );
+                }}
+                className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors cursor-pointer"
+              >
+                <div>
                   <div className="text-xs">تنزيل من</div>
                   <div className="text-lg font-semibold">App Store</div>
                 </div>

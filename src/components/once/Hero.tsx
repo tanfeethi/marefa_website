@@ -33,7 +33,8 @@ const Hero = () => {
           <div className="w-[80%] m-auto text-center mt-8 md:w-[60%]">
             <h1 className="text-3xl font-bold md:leading-20 md:text-6xl">
               التعليم لم يعد مقيدًا بالفصول… مع معرفة يمكنك أن تصنع تجربتك
-              التعليمية الخاصة بك في أي وقت وأينما كنت و  تعلم كما تحب متى تشاء ومن أي مكان لتصنع مسارك 
+              التعليمية الخاصة بك في أي وقت وأينما كنت و تعلم كما تحب متى تشاء
+              ومن أي مكان لتصنع مسارك
               <span className="text-[#F19704]"> نحو مستقبل أفضل </span>
             </h1>
 
@@ -50,10 +51,28 @@ const Hero = () => {
           </div>
 
           <div className="mt-10 w-full m-auto text-center gap-5 flex justify-center md:w-[60%]">
-            <button className="bg-[#F19704] text-white px-8 font-semibold py-4 rounded-xl cursor-pointer">
+            <button
+              className="bg-[#F19704] text-white px-8 font-semibold py-4 rounded-xl cursor-pointer"
+              onClick={() => {
+                window.open(
+                  "https://apps.apple.com/eg/app/%D9%85%D9%86%D8%B5%D8%A9-%D9%85%D8%B9%D8%B1%D9%81%D8%A9/id1620060542",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }}
+            >
               إبدأ التعلّم الآن
             </button>
-            <button className="border-[#F19704] border-2 px-8 font-semibold py-4 rounded-xl text-[#F19704] cursor-pointer">
+            <button
+              className="border-[#F19704] border-2 px-8 font-semibold py-4 rounded-xl text-[#F19704] cursor-pointer"
+              onClick={() => {
+                window.open(
+                  "https://apps.apple.com/eg/app/%D9%85%D9%86%D8%B5%D8%A9-%D9%85%D8%B9%D8%B1%D9%81%D8%A9/id1620060542",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }}
+            >
               أنضم كمعلم
             </button>
           </div>
