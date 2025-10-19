@@ -57,8 +57,8 @@ const Container = () => {
                 onClick={() => {
                   window.open(
                     "https://apps.apple.com/eg/app/%D9%85%D9%86%D8%B5%D8%A9-%D9%85%D8%B9%D8%B1%D9%81%D8%A9/id1620060542",
-                    "_blank", // opens in new tab
-                    "noopener,noreferrer" // security options
+                    "_blank",
+                    "noopener,noreferrer"
                   );
                 }}
                 className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors cursor-pointer"
@@ -76,7 +76,16 @@ const Container = () => {
                 </svg>
               </button>
 
-              <button className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors cursor-pointer">
+              <button
+                onClick={() => {
+                  window.open(
+                    "https://play.google.com/store/apps/details?id=com.maarefa.moltaqa&pcampaignid=web_share",
+                    "_blank",
+                    "noopener,noreferrer"
+                  );
+                }}
+                className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-3 hover:bg-gray-800 transition-colors cursor-pointer"
+              >
                 <div>
                   <div className="text-xs">احصل عليه من</div>
                   <div className="text-lg font-semibold">Google Play</div>
